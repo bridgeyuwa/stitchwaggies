@@ -5,10 +5,38 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Blog Post - Waggies Pet Services</title>
 <!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
 <!-- Material Symbols -->
-<link href="../dist/assets/app.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#7f13ec",
+              "primary-light": "#f2e7fc",
+              "background-light": "#ffffff", 
+              "background-off": "#f9f9fb",
+              "text-main": "#141118",
+              "text-sub": "#4b5563",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"],
+              "body": ["Inter", "sans-serif"],
+            },
+            boxShadow: {
+                'premium': '0 4px 20px -2px rgba(127, 19, 236, 0.08)',
+            }
+          },
+        },
+      }
+    </script>
 <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -56,10 +84,10 @@
         }
     </style>
 </head>
-<body class="bg-surface text-ink">
+<body class="bg-background-off text-text-main">
 <!-- Top Navigation -->
 <header class="sticky top-0 z-50 bg-white border-b border-[#f2f0f4] shadow-sm">
-<div class="container-page">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="flex items-center justify-between h-20">
 <!-- Logo -->
 <div class="flex items-center gap-3 cursor-pointer">
@@ -78,10 +106,10 @@
 </nav>
 <!-- Action & Mobile Menu -->
 <div class="flex items-center gap-4">
-<button class="hidden md:inline-flex btn btn-md btn-primary">
+<button class="hidden md:flex bg-primary hover:bg-[#680fc2] text-white text-sm font-bold py-2.5 px-6 rounded-lg transition-colors shadow-premium">
                         Book Now
                     </button>
-<button class="btn-icon md:hidden">
+<button class="md:hidden p-2 text-gray-600">
 <span class="material-symbols-outlined">menu</span>
 </button>
 </div>
@@ -91,9 +119,9 @@
 <main class="relative">
 <!-- Hero Section / Header -->
 <section class="bg-white pb-12 pt-16">
-<div class="container-page">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="max-w-4xl mx-auto text-center mb-8">
-<div class="inline-flex items-center justify-center px-3 py-1 rounded-full bg-primaryLight text-primary text-xs font-bold uppercase tracking-wider mb-6">
+<div class="inline-flex items-center justify-center px-3 py-1 rounded-full bg-primary-light text-primary text-xs font-bold uppercase tracking-wider mb-6">
                         Pet Grooming
                     </div>
 <h1 class="text-3xl md:text-5xl font-extrabold text-[#141118] leading-[1.15] tracking-tight mb-6">
@@ -134,18 +162,18 @@
 </section>
 <!-- Content Layout -->
 <section class="bg-white pb-24">
-<div class="container-page">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="flex flex-col lg:flex-row gap-12">
 <!-- Share Sidebar (Desktop Left) -->
 <div class="hidden lg:flex flex-col gap-4 w-16 pt-8 sticky top-32 h-fit">
 <span class="text-xs font-bold text-gray-400 uppercase tracking-wider text-center mb-2">Share</span>
-<button class="btn-icon">
+<button class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:text-primary hover:border-primary transition-all">
 <svg aria-hidden="true" class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"></path></svg>
 </button>
-<button class="btn-icon">
+<button class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:text-primary hover:border-primary transition-all">
 <svg aria-hidden="true" class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path></svg>
 </button>
-<button class="btn-icon">
+<button class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:text-primary hover:border-primary transition-all">
 <span class="material-symbols-outlined text-[20px]">link</span>
 </button>
 </div>
@@ -166,7 +194,7 @@
 <h4 class="text-primary font-bold text-lg mb-2">Did you know?</h4>
 <p class="text-sm text-gray-600 mb-0">Double-coated breeds like Golden Retrievers and Huskies regulate their temperature through their coat. Improper shaving can ruin this natural mechanism. Trust our experts.</p>
 </div>
-<button class="btn btn-md btn-primary">
+<button class="shrink-0 bg-white text-primary border border-primary font-semibold py-2 px-5 rounded-lg hover:bg-primary hover:text-white transition-colors text-sm shadow-sm">
                                 View Grooming Packages
                             </button>
 </div>
@@ -234,7 +262,7 @@
 <span>Stress-free Environment</span>
 </li>
 </ul>
-<button class="btn btn-lg btn-primary">
+<button class="w-full bg-primary hover:bg-[#680fc2] text-white text-sm font-bold py-3 rounded-lg transition-colors shadow-sm">
                                 Book This Service
                             </button>
 <p class="text-xs text-center text-gray-400 mt-3">Free consultation included</p>
@@ -293,7 +321,7 @@
 <label class="block text-sm font-medium text-gray-700 mb-2" for="comment">Leave a comment</label>
 <textarea class="w-full rounded-lg border-gray-300 shadow-sm focus:border-primary focus:ring-primary mb-3 text-sm p-3 border" id="comment" placeholder="Share your thoughts..." rows="4"></textarea>
 <div class="flex justify-end">
-<button class="btn btn-md btn-primary">Post Comment</button>
+<button class="bg-primary/90 hover:bg-primary text-white text-sm font-bold py-2 px-6 rounded-lg transition-colors">Post Comment</button>
 </div>
 </div>
 <!-- Comment List -->
@@ -328,7 +356,7 @@
 </section>
 <!-- Read Next -->
 <section class="bg-[#fcfaff] py-16">
-<div class="container-page">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="flex items-center justify-between mb-8">
 <h2 class="text-2xl font-bold text-[#141118]">Read Next</h2>
 <a class="text-primary font-medium hover:underline text-sm" href="#">View all articles</a>
@@ -375,12 +403,12 @@
 <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 24px 24px;"></div>
 <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
 <h2 class="text-3xl md:text-4xl font-black text-white mb-6 tracking-tight">Experience World-Class Pet Care</h2>
-<p class="text-primaryLight text-lg mb-8 max-w-2xl mx-auto">From grooming to relocation, Waggies provides the premium service your pet deserves. Join hundreds of happy pet owners in Abuja.</p>
+<p class="text-primary-light text-lg mb-8 max-w-2xl mx-auto">From grooming to relocation, Waggies provides the premium service your pet deserves. Join hundreds of happy pet owners in Abuja.</p>
 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-<button class="btn btn-lg btn-primary">
+<button class="bg-white text-primary font-bold py-4 px-8 rounded-lg shadow-lg hover:bg-gray-50 transition-colors text-lg">
                         Book a Service
                     </button>
-<button class="btn btn-lg btn-outline">
+<button class="bg-transparent border border-white text-white font-bold py-4 px-8 rounded-lg hover:bg-white/10 transition-colors text-lg">
                         Contact Us
                     </button>
 </div>
@@ -388,7 +416,7 @@
 </section>
 <!-- Minimal Footer -->
 <footer class="bg-[#141118] text-white py-12 border-t border-gray-800">
-<div class="container-page flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
 <div class="flex items-center gap-2">
 <span class="material-symbols-outlined text-primary text-2xl">pets</span>
 <span class="font-bold text-lg">Waggies</span>
