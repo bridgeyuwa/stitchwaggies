@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Waggies Pet Services - Online Shop</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#7e22ce", // Rich Purple (Purple 700)
+                        "primary-hover": "#6b21a8", // Darker Purple (Purple 800)
+                        "primary-light": "#f3e8ff", // Light Lavender (Purple 100)
+                        "primary-dark": "#3b0764", // Deepest Purple (Purple 950)
+                        "surface": "#ffffff",
+                        "surface-alt": "#faf5ff", // Very light purple background
+                        "text-main": "#1e1b4b", // Dark Indigo/Purple Text
+                        "text-body": "#4b5563", // Gray 600
+                        "gold": "#eab308", // Gold for stars
+                    },
+                    fontFamily: {
+                        "display": ["Playfair Display", "serif"],
+                        "sans": ["Plus Jakarta Sans", "sans-serif"],
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem", 
+                        "lg": "0.5rem", 
+                        "xl": "1rem", 
+                        "2xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    backgroundImage: {
+                        'hero-gradient': 'linear-gradient(to right bottom, rgba(59, 7, 100, 0.4), rgba(59, 7, 100, 0.7))',
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-surface-alt font-sans text-text-main antialiased selection:bg-primary selection:text-white">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-purple-100 bg-white/95 backdrop-blur-sm px-6 lg:px-12 py-4 shadow-sm">
+<div class="flex items-center gap-10">
+<div class="flex items-center gap-3">
+<div class="size-9 text-primary flex items-center justify-center bg-primary-light rounded-lg">
+<span class="material-symbols-outlined !text-[28px]">pets</span>
+</div>
+<h2 class="text-text-main text-2xl font-display font-bold leading-tight tracking-tight">Waggies</h2>
+</div>
+<div class="hidden lg:flex items-center gap-8">
+<a class="text-text-main text-sm font-semibold hover:text-primary transition-colors" href="#">Shop</a>
+<a class="text-text-body text-sm font-medium hover:text-primary transition-colors" href="#">Boarding</a>
+<a class="text-text-body text-sm font-medium hover:text-primary transition-colors" href="#">Grooming</a>
+<a class="text-text-body text-sm font-medium hover:text-primary transition-colors" href="#">Relocation</a>
+<a class="text-text-body text-sm font-medium hover:text-primary transition-colors" href="#">Contact</a>
+</div>
+</div>
+<div class="flex flex-1 justify-end gap-4 lg:gap-6 items-center">
+<label class="hidden md:flex flex-col min-w-40 !h-11 max-w-80 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-xl h-full border border-purple-100 bg-surface-alt focus-within:ring-2 focus-within:ring-primary/20 focus-within:border-primary transition-all">
+<div class="text-primary/60 flex items-center justify-center pl-4">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden border-none bg-transparent focus:border-none focus:ring-0 h-full placeholder:text-gray-400 px-4 text-sm font-medium text-text-main" placeholder="Search for premium products..." value=""/>
+</div>
+</label>
+<div class="flex gap-3">
+<button class="relative flex cursor-pointer items-center justify-center rounded-xl size-11 bg-white border border-purple-50 hover:bg-primary-light/50 text-text-main hover:text-primary transition-colors shadow-sm">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="absolute top-2 right-2 size-2.5 rounded-full bg-primary ring-2 ring-white"></span>
+</button>
+<button class="flex cursor-pointer items-center justify-center rounded-xl size-11 bg-white border border-purple-50 hover:bg-primary-light/50 text-text-main hover:text-primary transition-colors shadow-sm">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+<button class="lg:hidden flex cursor-pointer items-center justify-center rounded-xl size-11 bg-white border border-purple-50 text-text-main">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-1 flex flex-col items-center w-full">
+<div class="w-full max-w-[1440px] px-4 lg:px-10 py-6 lg:py-8">
+<div class="@container">
+<div class="flex min-h-[420px] lg:min-h-[580px] flex-col gap-6 bg-cover bg-center bg-no-repeat rounded-2xl lg:rounded-3xl items-start justify-end px-6 pb-10 lg:px-16 lg:pb-20 shadow-xl shadow-purple-900/10 overflow-hidden relative group" style='background-image: linear-gradient(rgba(59, 7, 100, 0.2) 0%, rgba(30, 4, 60, 0.7) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBA1l4b7vjZsXivYMZQvBZ7ONIjsJbMZ10p9gTDyZ2nPTzONouEad_RTIupxmfkbE6nngtWkDx6tZqdTrxIdwB7Y1hwc80rxM9iH5gr36uG1WrTYorAlx1uMvPcdjIg_l8i-TtcWiTDf-n-Uv5zBXU7CLnDEC0pGWKhYf90MbCRNDJqdWPzU3eoSp1-sogwWrrwLa38RbGwRjqXNd8F1E3pSlqZAJtg-N0NvTs4sw43xYECKO-sfk3-olbLtoHF7j0X6cHnwNd-uCwi");'>
+<div class="absolute inset-0 bg-gradient-to-t from-primary-dark/80 via-transparent to-transparent opacity-80"></div>
+<div class="relative z-10 flex flex-col gap-5 text-left max-w-3xl animate-fade-in-up">
+<span class="inline-flex items-center rounded-full bg-surface/95 backdrop-blur px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-primary w-fit shadow-md">
+                            New Collection 2025
+                        </span>
+<h1 class="text-white text-4xl lg:text-7xl font-display font-bold leading-[1.1] tracking-tight">
+                            Luxury Comfort <br/>For Your Best Friend
+                        </h1>
+<p class="text-purple-50 text-base lg:text-xl font-medium leading-relaxed max-w-2xl font-sans">
+                            Discover our exclusive range of Waggies-branded travel gear, gourmet nutrition, and premium accessories. Designed in Abuja, loved everywhere.
+                        </p>
+</div>
+<div class="relative z-10 flex flex-col sm:flex-row gap-4 mt-4">
+<button class="flex items-center justify-center rounded-xl h-14 px-8 bg-primary hover:bg-primary-hover hover:scale-105 transition-all text-white text-base font-bold tracking-wide shadow-lg shadow-primary/40">
+<span>Shop Waggies Carriers</span>
+</button>
+<button class="flex items-center justify-center rounded-xl h-14 px-8 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/40 text-white text-base font-bold tracking-wide transition-all">
+<span>View All Categories</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full max-w-[1440px] px-4 lg:px-10 pb-6">
+<div class="flex gap-4 overflow-x-auto pb-4 scrollbar-hide">
+<button class="flex h-12 shrink-0 items-center justify-center gap-x-2.5 rounded-full bg-primary text-white px-7 transition-transform hover:scale-105 shadow-md shadow-primary/20">
+<span class="material-symbols-outlined text-[20px]">grid_view</span>
+<p class="text-sm font-bold tracking-wide">All Products</p>
+</button>
+<button class="flex h-12 shrink-0 items-center justify-center gap-x-2.5 rounded-full bg-white border border-purple-100 hover:border-primary px-7 transition-all group hover:shadow-md">
+<span class="material-symbols-outlined text-[20px] text-primary/60 group-hover:text-primary">lunch_dining</span>
+<p class="text-text-main group-hover:text-primary text-sm font-semibold">Food &amp; Nutrition</p>
+</button>
+<button class="flex h-12 shrink-0 items-center justify-center gap-x-2.5 rounded-full bg-white border border-purple-100 hover:border-primary px-7 transition-all group hover:shadow-md">
+<span class="material-symbols-outlined text-[20px] text-primary/60 group-hover:text-primary">luggage</span>
+<p class="text-text-main group-hover:text-primary text-sm font-semibold">Carriers &amp; Travel</p>
+</button>
+<button class="flex h-12 shrink-0 items-center justify-center gap-x-2.5 rounded-full bg-white border border-purple-100 hover:border-primary px-7 transition-all group hover:shadow-md">
+<span class="material-symbols-outlined text-[20px] text-primary/60 group-hover:text-primary">pets</span>
+<p class="text-text-main group-hover:text-primary text-sm font-semibold">Toys &amp; Supplies</p>
+</button>
+<button class="flex h-12 shrink-0 items-center justify-center gap-x-2.5 rounded-full bg-white border border-purple-100 hover:border-primary px-7 transition-all group hover:shadow-md">
+<span class="material-symbols-outlined text-[20px] text-primary/60 group-hover:text-primary">diamond</span>
+<p class="text-text-main group-hover:text-primary text-sm font-semibold">Accessories</p>
+</button>
+<button class="flex h-12 shrink-0 items-center justify-center gap-x-2.5 rounded-full bg-white border border-purple-100 hover:border-primary px-7 transition-all group hover:shadow-md">
+<span class="material-symbols-outlined text-[20px] text-primary/60 group-hover:text-primary">medical_services</span>
+<p class="text-text-main group-hover:text-primary text-sm font-semibold">Health &amp; Wellness</p>
+</button>
+</div>
+</div>
+<div class="w-full max-w-[1440px] px-4 lg:px-10 py-6 flex flex-col lg:flex-row gap-10">
+<aside class="hidden lg:block w-72 shrink-0 space-y-8">
+<div class="bg-white p-6 rounded-2xl border border-purple-100 shadow-sm sticky top-28">
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-lg font-display font-bold text-text-main">Refine By</h3>
+<button class="text-xs text-primary font-bold uppercase hover:underline tracking-wider">Clear</button>
+</div>
+<div class="space-y-8">
+<div>
+<h4 class="text-sm font-bold mb-3 text-text-main uppercase tracking-wide">Price Range</h4>
+<div class="flex items-center gap-3 mb-2">
+<div class="relative w-full">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 text-primary font-bold text-xs">₦</span>
+<input class="w-full h-10 pl-7 pr-3 text-sm font-medium rounded-lg bg-surface-alt border-purple-100 focus:ring-1 focus:ring-primary focus:border-primary text-text-main" placeholder="Min" type="number"/>
+</div>
+<span class="text-gray-300">-</span>
+<div class="relative w-full">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 text-primary font-bold text-xs">₦</span>
+<input class="w-full h-10 pl-7 pr-3 text-sm font-medium rounded-lg bg-surface-alt border-purple-100 focus:ring-1 focus:ring-primary focus:border-primary text-text-main" placeholder="Max" type="number"/>
+</div>
+</div>
+</div>
+<div class="h-px bg-purple-50 w-full"></div>
+<div>
+<h4 class="text-sm font-bold mb-3 text-text-main uppercase tracking-wide">Brand</h4>
+<div class="space-y-3">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded border-gray-300 text-primary focus:ring-primary w-4 h-4" type="checkbox"/>
+<span class="text-sm text-text-body group-hover:text-primary transition-colors">Waggies Exclusive</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded border-gray-300 text-primary focus:ring-primary w-4 h-4" type="checkbox"/>
+<span class="text-sm text-text-body group-hover:text-primary transition-colors">Royal Canin</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded border-gray-300 text-primary focus:ring-primary w-4 h-4" type="checkbox"/>
+<span class="text-sm text-text-body group-hover:text-primary transition-colors">Pedigree</span>
+</label>
+</div>
+</div>
+<div>
+<h4 class="text-sm font-bold mb-3 text-text-main uppercase tracking-wide">Pet Type</h4>
+<div class="space-y-3">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="rounded border-gray-300 text-primary focus:ring-primary w-4 h-4" type="checkbox"/>
+<span class="text-sm text-text-body group-hover:text-primary transition-colors">Dogs</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded border-gray-300 text-primary focus:ring-primary w-4 h-4" type="checkbox"/>
+<span class="text-sm text-text-body group-hover:text-primary transition-colors">Cats</span>
+</label>
+</div>
+</div>
+</div>
+</div>
+</aside>
+<div class="flex-1 flex flex-col">
+<div class="flex items-center justify-between pb-8">
+<h2 class="text-text-main text-3xl font-display font-bold">Shop by Category</h2>
+<a class="text-sm font-bold text-primary hover:text-primary-hover flex items-center gap-1" href="#">
+                        View All <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-5 mb-14">
+<a class="group relative overflow-hidden rounded-2xl aspect-[4/5] md:aspect-square shadow-lg" href="#">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAGTVb3sll-xYJD0cNLPyBKC35QCmtzwUexjfm9_ceyrw01kwATx6RHsqq71w3237c9ibl3Tf3qeXkU7QHMu7fBlZXeZVGOURTED5MfujGNXeuGc-N7xPOqQvBLUMg-4mLy-dzn4emmHQSN2hWrB0S0x3PZBVrWjug7LijhxaQMZ6mflDEy7ZR7lyWiAsZTnyFJZOR0AYf0F_CLpX_fkxjOL4JkbmvSQS-X0g1pcQDWOqNPUw9Rw2Cf1TCWeAinSBsGzO4m_i19EzzM");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary-dark/90 via-primary-dark/20 to-transparent flex flex-col justify-end p-5">
+<p class="text-white text-lg font-display font-bold group-hover:translate-y-[-2px] transition-transform">Premium Food</p>
+<p class="text-purple-200 text-xs mt-1 font-medium tracking-wide">Nutrition for all breeds</p>
+</div>
+</a>
+<a class="group relative overflow-hidden rounded-2xl aspect-[4/5] md:aspect-square shadow-lg" href="#">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCpoFr5wUTFh-ytXWb8eeuApjPq0lygvbIUzPDZpfxFpCJGl8DeKXFg2PBvVT7ZzCkFdK7pQYnJJ36BozJZbi93qTcAuGeVNQn7KmVUgJW-Ukp2nCYEaavfYjwfjdVPwYhCj3H23O0grDm5tcVeq80hdgvwGOkD16hz8f2yK9WR56gVPZxHPKqwtYVK7h_2uXany0_0gyZJipTLgQ376o0MMmcqip_DH0uPcL6jwHmR_zeBzUH3fL9V9PYru0twHtuj0UHRMKbT_uS0");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary-dark/90 via-primary-dark/20 to-transparent flex flex-col justify-end p-5">
+<p class="text-white text-lg font-display font-bold group-hover:translate-y-[-2px] transition-transform">Luxury Carriers</p>
+<p class="text-purple-200 text-xs mt-1 font-medium tracking-wide">IATA Approved</p>
+</div>
+</a>
+<a class="group relative overflow-hidden rounded-2xl aspect-[4/5] md:aspect-square shadow-lg" href="#">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB3TnTkB-dve0h47FMqqmBbfwGKhkkqYGu0qnhGmkWHBXLu8YVzorcDve1OGB1w5pxqz6VMxpw9aYD0OnryWn6q8wk0Kttuv39KknCageX_3ZorN9q2JXfqViJ-7_xdF0_ZC5duk_6s48G4GQotn6IMLC3jmg9OHuSXDGEdbrkSibSlH16oFDb7rjv9o_5i9tQb_dbb_SiVMDzYGnRvq1NTZe4J84VwGmtucNPs_X7tP9y01tOgASBGblDWSLX4atFRe8En7ifVAAz7");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary-dark/90 via-primary-dark/20 to-transparent flex flex-col justify-end p-5">
+<p class="text-white text-lg font-display font-bold group-hover:translate-y-[-2px] transition-transform">Supplies</p>
+<p class="text-purple-200 text-xs mt-1 font-medium tracking-wide">Toys, Leashes &amp; more</p>
+</div>
+</a>
+<a class="group relative overflow-hidden rounded-2xl aspect-[4/5] md:aspect-square shadow-lg" href="#">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBbZRfqxzihxWrb8oWGnVUUlYxAfllkRcat9nhd52C9NTKA8UOd87L3FtAJJUEGDUb_MqhL2m2ZrnI1kPj71J-ZzqXITpJgvzwz1TI4UTaDQznRNKWs3YeHq0-HU9dMtdt5rbqp88PKnXD3WK4ZipSSOomPqhdvW5ikp0hwR0P0f6LdSUKZOL810ETvq2W6A8pui4W_tkr8kStCWoT-e5EP2i6-OxZKjz5WjSetGDZ8LXvo1CoBBdMcugQ_BOEoBJKV1ge4DAUiURNh");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary-dark/90 via-primary-dark/20 to-transparent flex flex-col justify-end p-5">
+<p class="text-white text-lg font-display font-bold group-hover:translate-y-[-2px] transition-transform">Accessories</p>
+<p class="text-purple-200 text-xs mt-1 font-medium tracking-wide">Collars &amp; Tags</p>
+</div>
+</a>
+</div>
+<div class="flex items-end justify-between pb-8 border-t border-purple-100 pt-10">
+<div>
+<h2 class="text-text-main text-3xl font-display font-bold">Best Sellers</h2>
+<p class="text-sm text-text-body mt-2 font-medium">Top picks by Abuja pet owners</p>
+</div>
+<div class="flex gap-2">
+<button class="size-10 rounded-full border border-purple-100 flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white transition-all text-text-main">
+<span class="material-symbols-outlined text-xl">chevron_left</span>
+</button>
+<button class="size-10 rounded-full border border-purple-100 flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white transition-all text-text-main">
+<span class="material-symbols-outlined text-xl">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
+<div class="flex flex-col gap-4 group">
+<div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-surface-alt shadow-sm group-hover:shadow-lg transition-all duration-300">
+<div class="absolute top-3 left-3 bg-white/95 backdrop-blur-sm px-3 py-1.5 rounded-md text-xs font-bold text-primary shadow-sm z-10 tracking-wide uppercase">Best Seller</div>
+<img alt="Large bag of premium dog food on white background" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeZz8KPMo0QHZQoeStTg9R4RrZPTfNwhz1P2RvGB_uYewImT30dWnh1413wA8-rD5b29wv_FFu9wSG2ssxxWtq-5MB60Bzbmls2n_IcyezlGIfzmHrMryPTjE7hP97nUwXLqIGEg6znKCXIG0hdWVruHeYiSrjWxfBzJ9jaclzyD-sQN5a6ijAwF5pAllqfwJJsTu4h0OJSOWjgFE6zgm5DKO88IuF57Ra2ewhiqGbEezSwlTQyon7i0-8IOKYImgbKZBR8FT7oLbH"/>
+<button class="absolute bottom-4 right-4 size-12 rounded-full bg-primary text-white flex items-center justify-center shadow-lg shadow-primary/30 translate-y-20 group-hover:translate-y-0 transition-transform duration-300 hover:bg-primary-hover">
+<span class="material-symbols-outlined text-[24px]">add_shopping_cart</span>
+</button>
+</div>
+<div>
+<div class="flex justify-between items-start mb-1">
+<h3 class="text-lg font-bold font-display text-text-main line-clamp-1 group-hover:text-primary transition-colors">Royal Canin Maxi Adult</h3>
+<p class="text-lg font-bold text-primary whitespace-nowrap">₦ 45,000</p>
+</div>
+<p class="text-sm text-text-body font-medium">Food • 15kg</p>
+<div class="flex items-center gap-1 mt-2">
+<span class="material-symbols-outlined text-gold text-[18px] fill-current">star</span>
+<span class="material-symbols-outlined text-gold text-[18px] fill-current">star</span>
+<span class="material-symbols-outlined text-gold text-[18px] fill-current">star</span>
+<span class="material-symbols-outlined text-gold text-[18px] fill-current">star</span>
+<span class="material-symbols-outlined text-gold text-[18px] fill-current">star_half</span>
+<span class="text-xs text-gray-400 ml-1 font-bold">(128)</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-4 group">
+<div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-surface-alt shadow-sm group-hover:shadow-lg transition-all duration-300">
+<div class="absolute top-3 right-3 bg-red-500 text-white px-3 py-1.5 rounded-md text-xs font-bold shadow-sm z-10 tracking-wide">-15%</div>
+<img alt="Sturdy plastic pet carrier crate" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD87R3ikFk3-ovfxzuhYJo5cKqC0450Hohv5f2_CF0yATv4gMYNRs4dNQp7txGe-rUVBvcQKUQf8bSB2MU2YYv4Mx0_oC9lnDCNulAuZn9FwbrpHPLUIfCWYdP7PstGw7diWz1evNtTZFCkxajzad_UtvPEXsfjA41LjeT5f6JCRIaSfaFfp1EJOJw84OOqm8gG9GrxALZq4itk38gZXOf12Aph8elIkGzYQ0-2KvfCXQgc-otP2j7VTY6h9aGPs4rOGlWzlfPTvGNe"/>
+<button class="absolute bottom-4 right-4 size-12 rounded-full bg-primary text-white flex items-center justify-center shadow-lg shadow-primary/30 translate-y-20 group-hover:translate-y-0 transition-transform duration-300 hover:bg-primary-hover">
+<span class="material-symbols-outlined text-[24px]">add_shopping_cart</span>
+</button>
+</div>
+<div>
+<div class="flex justify-between items-start mb-1">
+<h3 class="text-lg font-bold font-display text-text-main line-clamp-1 group-hover:text-primary transition-colors">Waggies Pro Traveler</h3>
+<div class="flex flex-col items-end">
+<p class="text-lg font-bold text-primary whitespace-nowrap">₦ 85,000</p>
+<p class="text-xs text-gray-400 line-through font-medium">₦ 100,000</p>
+</div>
+</div>
+<p class="text-sm text-text-body font-medium">Carriers • Size L</p>
+<div class="flex items-center gap-1 mt-2">
+<span class="material-symbols-outlined text-gold text-[18px] fill-current">star</span>
+<span class="material-symbols-outlined text-gold text-[18px] fill-current">star</span>
+<span class="material-symbols-outlined text-gold text-[18px] fill-current">star</span>
+<span class="material-symbols-outlined text-gold text-[18px] fill-current">star</span>
+<span class="material-symbols-outlined text-gold text-[18px] fill-current">star</span>
+<span class="text-xs text-gray-400 ml-1 font-bold">(54)</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-4 group">
+<div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-surface-alt shadow-sm group-hover:shadow-lg transition-all duration-300">
+<img alt="Stylish leather dog collar" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfuNAy5QT6DxZSthzIuKfW6MEK1bFIEDzW6hJTu-bOxdxStVHbq9o_hMGQjYUhpbxXD0ZDhCSDKKnpt5SVZ6ll0pVJNtX0W73MAVUems10dxQsPP6P831fSdyDFemYGsicOUNs-Y6bImJ8M4IEw7FebweXBnMbSjA7oi8ULCzXsHiBbkuqb2A11f1nBaDnjUU30TdWKx2doQ57iSZUSpkTKabTGUoUOr9dHiD2HlYSp-G7RvzI_QNzsT5aPstHxpgBwIYLBTN0_Zzg"/>
+<button class="absolute bottom-4 right-4 size-12 rounded-full bg-primary text-white flex items-center justify-center shadow-lg shadow-primary/30 translate-y-20 group-hover:translate-y-0 transition-transform duration-300 hover:bg-primary-hover">
+<span class="material-symbols-outlined text-[24px]">add_shopping_cart</span>
+</button>
+</div>
+<div>
+<div class="flex justify-between items-start mb-1">
+<h3 class="text-lg font-bold font-display text-text-main line-clamp-1 group-hover:text-primary transition-colors">Luxury Leather Collar</h3>
+<p class="text-lg font-bold text-primary whitespace-nowrap">₦ 12,500</p>
+</div>
+<p class="text-sm text-text-body font-medium">Accessories • Red</p>
+<div class="flex items-center gap-1 mt-2">
+<span class="material-symbols-outlined text-gold text-[18px] fill-current">star</span>
+<span class="material-symbols-outlined text-gold text-[18px] fill-current">star</span>
+<span class="material-symbols-outlined text-gold text-[18px] fill-current">star</span>
+<span class="material-symbols-outlined text-gold text-[18px] fill-current">star</span>
+<span class="material-symbols-outlined text-gray-300 text-[18px]">star</span>
+<span class="text-xs text-gray-400 ml-1 font-bold">(32)</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-4 group">
+<div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-surface-alt shadow-sm group-hover:shadow-lg transition-all duration-300">
+<img alt="Grooming brush for dogs" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKDOexh_ONfkWBaSM7Dlfr-qAFrzJoGG35wLReIn0Yc0TE39O4nYqFwUottF_3lOPjCHrSxZ32EFzbVwlLDSF31nddqodgJnZELNop__HOiRCM9HHJ30G5vuGJbgq8cetC6Dvd_Gi7dgSwFhajIC-sAkGYDVLT65YG3TUEEaRUSG-q1D0HiHE2vIfbcszdsYmuLFuR9236KMAWPydRsulZrKyTKhv9HhFOw9SiqujpqGSmDzuwvFsTnhd19Bz_2Gbwdkm-K06e21s9"/>
+<button class="absolute bottom-4 right-4 size-12 rounded-full bg-primary text-white flex items-center justify-center shadow-lg shadow-primary/30 translate-y-20 group-hover:translate-y-0 transition-transform duration-300 hover:bg-primary-hover">
+<span class="material-symbols-outlined text-[24px]">add_shopping_cart</span>
+</button>
+</div>
+<div>
+<div class="flex justify-between items-start mb-1">
+<h3 class="text-lg font-bold font-display text-text-main line-clamp-1 group-hover:text-primary transition-colors">Pro Grooming Brush</h3>
+<p class="text-lg font-bold text-primary whitespace-nowrap">₦ 5,000</p>
+</div>
+<p class="text-sm text-text-body font-medium">Grooming</p>
+<div class="flex items-center gap-1 mt-2">
+<span class="material-symbols-outlined text-gold text-[18px] fill-current">star</span>
+<span class="material-symbols-outlined text-gold text-[18px] fill-current">star</span>
+<span class="material-symbols-outlined text-gold text-[18px] fill-current">star</span>
+<span class="material-symbols-outlined text-gold text-[18px] fill-current">star</span>
+<span class="material-symbols-outlined text-gold text-[18px] fill-current">star</span>
+<span class="text-xs text-gray-400 ml-1 font-bold">(210)</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-4 group">
+<div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-surface-alt shadow-sm group-hover:shadow-lg transition-all duration-300">
+<img alt="Comfortable pet bed" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDef7Pekz4365RMn5UbEnWYqWRxxQ8QYSLElXPqsBikCrs4ERwx-ZuNX_XUBekeRrFxTO4rSy-mqzSRCoI823wKk32QrOTCea4TxdJ4CsThIBX1nbfAP1Af_2cST8Cf6mWmeWeDErtv_noezQLRMaxvyA22GhoXxeyjiV2p058jN3GJXu1jYxpjQp9gUEqYFtpDuoNUfYF2iJEbPikt4oRpYTA6FZu2GXMgFddsP3KgSjGvaqpGxJ-z6kc_Jb3egD9irEZ8_VN_Vl8r"/>
+<button class="absolute bottom-4 right-4 size-12 rounded-full bg-primary text-white flex items-center justify-center shadow-lg shadow-primary/30 translate-y-20 group-hover:translate-y-0 transition-transform duration-300 hover:bg-primary-hover">
+<span class="material-symbols-outlined text-[24px]">add_shopping_cart</span>
+</button>
+</div>
+<div>
+<div class="flex justify-between items-start mb-1">
+<h3 class="text-lg font-bold font-display text-text-main line-clamp-1 group-hover:text-primary transition-colors">Orthopedic Foam Bed</h3>
+<p class="text-lg font-bold text-primary whitespace-nowrap">₦ 32,000</p>
+</div>
+<p class="text-sm text-text-body font-medium">Supplies • Grey</p>
+<div class="flex items-center gap-1 mt-2">
+<span class="material-symbols-outlined text-gold text-[18px] fill-current">star</span>
+<span class="material-symbols-outlined text-gold text-[18px] fill-current">star</span>
+<span class="material-symbols-outlined text-gold text-[18px] fill-current">star</span>
+<span class="material-symbols-outlined text-gold text-[18px] fill-current">star</span>
+<span class="material-symbols-outlined text-gold text-[18px] fill-current">star_half</span>
+<span class="text-xs text-gray-400 ml-1 font-bold">(89)</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-4 group">
+<div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-surface-alt shadow-sm group-hover:shadow-lg transition-all duration-300">
+<div class="absolute top-3 left-3 bg-primary text-white px-3 py-1.5 rounded-md text-xs font-bold shadow-sm z-10 tracking-wide uppercase">New</div>
+<img alt="Cat toy interactive puzzle" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSvpZwhK0PFjaDd3Pwg3RwmkllE9kydOYbuiwz01I9YsEsbLvQLxcB1AEKhiaS9uwS92syt8W-0_f8hUZt-Y_KxRaJll0TMsJJ0nx5iLWqeoAPvy4NZTlCArlzzrTs_BKFMiFtpzGuzYmFTefoDEnQVj5D51iCUoL1iwFAMAO5XtR8tQWX_EqmirOzohNrOY2xbfRl1EcvgegiLM5RdVNxu8oHyZBCrIA7Hc7odKexjg3Iy4bv77YeCd9IjSM9efGLw7tl_b3GXJB7"/>
+<button class="absolute bottom-4 right-4 size-12 rounded-full bg-primary text-white flex items-center justify-center shadow-lg shadow-primary/30 translate-y-20 group-hover:translate-y-0 transition-transform duration-300 hover:bg-primary-hover">
+<span class="material-symbols-outlined text-[24px]">add_shopping_cart</span>
+</button>
+</div>
+<div>
+<div class="flex justify-between items-start mb-1">
+<h3 class="text-lg font-bold font-display text-text-main line-clamp-1 group-hover:text-primary transition-colors">Interactive Treat Puzzle</h3>
+<p class="text-lg font-bold text-primary whitespace-nowrap">₦ 8,500</p>
+</div>
+<p class="text-sm text-text-body font-medium">Toys</p>
+<div class="flex items-center gap-1 mt-2">
+<span class="material-symbols-outlined text-gold text-[18px] fill-current">star</span>
+<span class="material-symbols-outlined text-gold text-[18px] fill-current">star</span>
+<span class="material-symbols-outlined text-gold text-[18px] fill-current">star</span>
+<span class="material-symbols-outlined text-gold text-[18px] fill-current">star</span>
+<span class="material-symbols-outlined text-gray-300 text-[18px]">star</span>
+<span class="text-xs text-gray-400 ml-1 font-bold">(12)</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-16 flex justify-center">
+<button class="flex items-center gap-3 px-8 py-4 border border-purple-200 bg-white rounded-full text-sm font-bold text-text-main hover:bg-primary hover:text-white hover:border-primary transition-all shadow-sm">
+                        Load More Products
+                        <span class="material-symbols-outlined text-[18px]">expand_more</span>
+</button>
+</div>
+</div>
+</div>
+<div class="w-full mt-12 mb-20">
+<div class="max-w-[1440px] mx-auto px-4 lg:px-10">
+<div class="bg-primary-dark rounded-3xl p-8 lg:p-14 flex flex-col md:flex-row items-center justify-between gap-12 relative overflow-hidden shadow-2xl shadow-purple-900/30">
+<div class="absolute top-0 right-0 w-2/3 h-full bg-gradient-to-l from-primary/20 to-transparent skew-x-12 translate-x-1/4 pointer-events-none"></div>
+<div class="absolute bottom-0 left-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl -translate-x-1/3 translate-y-1/3 pointer-events-none"></div>
+<div class="z-10 max-w-2xl">
+<h3 class="text-white text-3xl lg:text-4xl font-display font-bold mb-4">Traveling with your pet?</h3>
+<p class="text-purple-100 text-lg lg:text-xl mb-8 leading-relaxed font-light">Get custom-built, IATA-approved crates for safe and comfortable air travel. We handle relocation services too.</p>
+<a class="inline-flex items-center justify-center h-14 px-8 bg-white text-primary-dark font-bold rounded-xl hover:bg-purple-50 transition-colors shadow-lg tracking-wide" href="#">
+                            Get a Relocation Quote
+                        </a>
+</div>
+<div class="z-10 shrink-0">
+<div class="size-32 rounded-full bg-white/10 flex items-center justify-center text-purple-200 mb-2 mx-auto md:mx-0 backdrop-blur-sm border border-white/20 shadow-inner">
+<span class="material-symbols-outlined text-6xl">flight_takeoff</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="bg-white border-t border-purple-100 pt-16 pb-10 px-6 lg:px-10">
+<div class="max-w-[1440px] mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 lg:gap-16 mb-16">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">pets</span>
+<span class="text-2xl font-display font-bold text-text-main">Waggies</span>
+</div>
+<p class="text-text-body text-sm leading-relaxed mb-6 font-medium">
+                        Premium pet care services in Abuja. From grooming to international relocation, we treat your pets like family.
+                    </p>
+<div class="flex gap-4">
+<a class="text-gray-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-gray-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+<a class="text-gray-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">call</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-bold text-text-main mb-6 uppercase text-sm tracking-wider">Shop</h4>
+<ul class="space-y-4 text-sm text-text-body font-medium">
+<li><a class="hover:text-primary transition-colors" href="#">Food &amp; Treats</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Travel Crates</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Accessories</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">New Arrivals</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-text-main mb-6 uppercase text-sm tracking-wider">Services</h4>
+<ul class="space-y-4 text-sm text-text-body font-medium">
+<li><a class="hover:text-primary transition-colors" href="#">Pet Boarding</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Grooming Salon</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Vet Care</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Import/Export</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-text-main mb-6 uppercase text-sm tracking-wider">Stay Updated</h4>
+<p class="text-sm text-text-body mb-4 font-medium">Subscribe for grooming tips and exclusive shop discounts.</p>
+<form class="flex flex-col gap-3">
+<input class="w-full rounded-lg bg-surface-alt border border-purple-100 px-4 py-2.5 text-sm focus:border-primary focus:ring-1 focus:ring-primary outline-none text-text-main" placeholder="Email address" type="email"/>
+<button class="w-full bg-primary text-white font-bold py-2.5 rounded-lg hover:bg-primary-hover transition-colors text-sm shadow-md">Subscribe</button>
+</form>
+</div>
+</div>
+<div class="border-t border-purple-50 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-sm text-gray-400 font-medium">© 2025 Waggies Pet Services. All rights reserved.</p>
+<div class="flex gap-8 text-sm text-gray-400 font-medium">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+
+</body></html>
