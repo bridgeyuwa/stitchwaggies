@@ -1,0 +1,11 @@
+{
+  "name": "stitchwaggies",
+  "private": true,
+  "scripts": {
+    "dev": "tailwindcss -i ./src/styles/tailwind.css -o ./dist/assets/app.css --watch",
+    "build": "tailwindcss -i ./src/styles/tailwind.css -o ./dist/assets/app.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}
