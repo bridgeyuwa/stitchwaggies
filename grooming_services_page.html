@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Grooming Services - Waggies Pet Services</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200..800&amp;family=Noto+Sans:wght@400..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#7f13ec",
+                        "primary-hover": "#6b11c9",
+                        "primary-light": "#f3e8ff",
+                        "background-light": "#ffffff",
+                        "background-alt": "#faf5ff", 
+                        "text-main": "#1e1b4b",
+                        "text-body": "#475569",
+                        "border-light": "#e2e8f0",
+                        "card-white": "#ffffff",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"],
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 20px -2px rgba(127, 19, 236, 0.08)',
+                        'glow': '0 0 15px rgba(127, 19, 236, 0.3)',
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light text-text-main font-display overflow-x-hidden antialiased selection:bg-primary/20 selection:text-primary">
+<div class="relative flex flex-col min-h-screen w-full">
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-purple-100 bg-white/90 backdrop-blur-md px-6 py-4 md:px-10 shadow-sm">
+<div class="flex items-center gap-3">
+<div class="size-8 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl">pets</span>
+</div>
+<h2 class="text-text-main text-xl font-bold leading-tight tracking-tight">Waggies</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-8">
+<nav class="flex items-center gap-8">
+<a class="text-text-body hover:text-primary text-sm font-medium leading-normal transition-colors" href="#">Home</a>
+<a class="text-primary text-sm font-bold leading-normal" href="#">Services</a>
+<a class="text-text-body hover:text-primary text-sm font-medium leading-normal transition-colors" href="#">About Us</a>
+<a class="text-text-body hover:text-primary text-sm font-medium leading-normal transition-colors" href="#">Contact</a>
+<a class="text-text-body hover:text-primary text-sm font-medium leading-normal transition-colors" href="#">Blog</a>
+</nav>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-6 bg-primary hover:bg-primary-hover text-white text-sm font-bold leading-normal tracking-wide transition-all shadow-lg shadow-primary/20">
+<span class="truncate">Book Now</span>
+</button>
+</div>
+<button class="md:hidden text-text-main">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</header>
+<div class="relative w-full">
+<div class="relative flex min-h-[560px] flex-col gap-8 bg-cover bg-center bg-no-repeat items-center justify-center p-6 md:p-12 lg:p-20" data-alt="Close up of a happy golden retriever being groomed with professional tools, soft lighting" style='background-image: linear-gradient(rgba(255, 255, 255, 0.1) 0%, rgba(46, 16, 101, 0.4) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuActWQH_lFioB8ZLy64HUH576u4bO-01O14vxBnqjUlJZnrdEw3LWXVmDrC5JOaZU1FPncM2MnhX9J1x4hEma-VJ-r-jFGM8Kjm1NIA_uLV7dA5aGxyO1h9Zg_8y6FqiTzCN3skLf6vw6A3-egzwg0WfJ9CCr3qnvMowgOQC81xyYSiybXCHfp6gXD9WSe1YrzdIoJoVfl3Dd-89e5ZmO9QCkBiybxB2qBfxZ57_GC6kJv8sPT8i5-BI0c9Kx5-sfEQvlXf7kSGLVMO");'>
+<div class="absolute inset-0 bg-gradient-to-r from-white/90 via-white/40 to-transparent md:via-white/60"></div>
+<div class="relative z-10 flex flex-col gap-5 text-left md:text-center max-w-[800px] w-full items-start md:items-center">
+<span class="inline-block px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-widest backdrop-blur-sm">
+                        Premium Pet Care in Abuja
+                    </span>
+<h1 class="text-slate-900 text-4xl md:text-6xl lg:text-7xl font-black leading-[1.1] tracking-tight drop-shadow-sm">
+                        Luxury Grooming &amp; <br class="hidden md:block"/> <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-800">Spa Treatments</span>
+</h1>
+<p class="text-slate-700 text-base md:text-xl font-medium leading-relaxed max-w-2xl mx-auto drop-shadow-sm bg-white/30 p-2 rounded-lg md:bg-transparent md:p-0">
+                        Experience stress-free handling and professional styling. From soothing oatmeal baths to breed-specific cuts, we pamper your furry friends with the highest standards of hygiene and care.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4 mt-4 w-full sm:w-auto">
+<button class="flex w-full sm:w-auto min-w-[160px] cursor-pointer items-center justify-center rounded-full h-12 px-8 bg-primary hover:bg-primary-hover text-white text-base font-bold transition-transform hover:-translate-y-0.5 shadow-lg shadow-primary/30">
+                            Book Appointment
+                        </button>
+<button class="flex w-full sm:w-auto min-w-[160px] cursor-pointer items-center justify-center rounded-full h-12 px-8 bg-white hover:bg-gray-50 text-text-main border border-gray-200 text-base font-bold transition-colors shadow-sm hover:shadow-md">
+                            View Gallery
+                        </button>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full bg-background-light py-16 border-b border-purple-50">
+<div class="max-w-[1100px] mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
+<div class="flex flex-col items-center text-center gap-4 group hover:bg-background-alt p-6 rounded-2xl transition-colors duration-300">
+<div class="size-16 rounded-2xl bg-primary-light flex items-center justify-center text-primary mb-2 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">verified_user</span>
+</div>
+<div>
+<h3 class="text-text-main font-bold text-xl mb-2">Certified Stylists</h3>
+<p class="text-text-body text-sm leading-relaxed">Our team is trained in breed-specific cuts and gentle handling techniques.</p>
+</div>
+</div>
+<div class="flex flex-col items-center text-center gap-4 group hover:bg-background-alt p-6 rounded-2xl transition-colors duration-300">
+<div class="size-16 rounded-2xl bg-primary-light flex items-center justify-center text-primary mb-2 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">water_drop</span>
+</div>
+<div>
+<h3 class="text-text-main font-bold text-xl mb-2">Hypoallergenic Products</h3>
+<p class="text-text-body text-sm leading-relaxed">We use only premium, pet-safe shampoos and conditioners for sensitive skin.</p>
+</div>
+</div>
+<div class="flex flex-col items-center text-center gap-4 group hover:bg-background-alt p-6 rounded-2xl transition-colors duration-300">
+<div class="size-16 rounded-2xl bg-primary-light flex items-center justify-center text-primary mb-2 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">spa</span>
+</div>
+<div>
+<h3 class="text-text-main font-bold text-xl mb-2">Stress-Free Environment</h3>
+<p class="text-text-body text-sm leading-relaxed">Calming techniques and a soothing atmosphere for anxious pets.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full py-20 px-4 md:px-10 flex flex-col items-center bg-background-alt">
+<div class="max-w-[1100px] w-full flex flex-col gap-12">
+<div class="text-center max-w-2xl mx-auto">
+<h2 class="text-text-main tracking-tight text-3xl md:text-4xl font-bold leading-tight pb-4">Our Grooming Packages</h2>
+<p class="text-text-body text-lg">Tailored options for every breed and coat type, designed to make your pet look and feel their best.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+<div class="flex flex-1 flex-col gap-6 rounded-2xl border border-border-light bg-white p-8 shadow-soft transition-all hover:-translate-y-1 hover:shadow-lg">
+<div class="flex flex-col gap-2 border-b border-border-light pb-6">
+<h3 class="text-text-main text-xl font-bold leading-tight">The Spruce Up</h3>
+<p class="text-text-body text-sm">Essential maintenance for in-between grooms.</p>
+<div class="flex items-baseline gap-1 text-primary mt-3">
+<span class="text-4xl font-black leading-tight tracking-tight">₦15,000</span>
+<span class="text-sm font-medium text-text-body">starting at</span>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<div class="text-sm font-medium flex gap-3 text-text-body items-center">
+<span class="material-symbols-outlined text-primary text-[20px] bg-primary-light rounded-full p-0.5">check</span>
+                                Bath &amp; Massage
+                            </div>
+<div class="text-sm font-medium flex gap-3 text-text-body items-center">
+<span class="material-symbols-outlined text-primary text-[20px] bg-primary-light rounded-full p-0.5">check</span>
+                                Brush Out
+                            </div>
+<div class="text-sm font-medium flex gap-3 text-text-body items-center">
+<span class="material-symbols-outlined text-primary text-[20px] bg-primary-light rounded-full p-0.5">check</span>
+                                Blow Dry
+                            </div>
+<div class="text-sm font-medium flex gap-3 text-text-body items-center">
+<span class="material-symbols-outlined text-primary text-[20px] bg-primary-light rounded-full p-0.5">check</span>
+                                Cologne Spritz
+                            </div>
+</div>
+<button class="mt-4 flex w-full cursor-pointer items-center justify-center rounded-xl h-12 px-4 bg-slate-100 hover:bg-slate-200 text-text-main text-sm font-bold leading-normal transition-colors">
+                            Select Package
+                        </button>
+</div>
+<div class="relative flex flex-1 flex-col gap-6 rounded-2xl border-2 border-primary bg-white p-8 shadow-2xl transform md:-translate-y-4 z-10">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white text-xs font-bold px-6 py-2 rounded-full uppercase tracking-wider shadow-md">
+                            Most Popular
+                        </div>
+<div class="flex flex-col gap-2 border-b border-dashed border-primary/20 pb-6">
+<h3 class="text-text-main text-2xl font-bold leading-tight">The Full Waggie</h3>
+<p class="text-text-body text-sm">Complete hygiene and styling package.</p>
+<div class="flex items-baseline gap-1 text-primary mt-3">
+<span class="text-5xl font-black leading-tight tracking-tight">₦25,000</span>
+<span class="text-sm font-medium text-text-body">starting at</span>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<div class="text-sm font-bold flex gap-3 text-text-main items-center">
+<span class="material-symbols-outlined text-primary text-[22px]">check_circle</span>
+                                Everything in Spruce Up
+                            </div>
+<div class="text-sm font-medium flex gap-3 text-text-body items-center">
+<span class="material-symbols-outlined text-primary text-[20px] bg-primary-light rounded-full p-0.5">check</span>
+                                Nail Trimming
+                            </div>
+<div class="text-sm font-medium flex gap-3 text-text-body items-center">
+<span class="material-symbols-outlined text-primary text-[20px] bg-primary-light rounded-full p-0.5">check</span>
+                                Ear Cleaning
+                            </div>
+<div class="text-sm font-medium flex gap-3 text-text-body items-center">
+<span class="material-symbols-outlined text-primary text-[20px] bg-primary-light rounded-full p-0.5">check</span>
+                                Sanitary Trim
+                            </div>
+<div class="text-sm font-medium flex gap-3 text-text-body items-center">
+<span class="material-symbols-outlined text-primary text-[20px] bg-primary-light rounded-full p-0.5">check</span>
+                                Standard Styling
+                            </div>
+</div>
+<button class="mt-4 flex w-full cursor-pointer items-center justify-center rounded-xl h-12 px-4 bg-primary hover:bg-primary-hover text-white text-sm font-bold leading-normal transition-colors shadow-lg shadow-primary/25">
+                            Select Package
+                        </button>
+</div>
+<div class="flex flex-1 flex-col gap-6 rounded-2xl border border-border-light bg-white p-8 shadow-soft transition-all hover:-translate-y-1 hover:shadow-lg">
+<div class="flex flex-col gap-2 border-b border-border-light pb-6">
+<h3 class="text-text-main text-xl font-bold leading-tight">The Showstopper</h3>
+<p class="text-text-body text-sm">Show-quality cuts and luxury treatments.</p>
+<div class="flex items-baseline gap-1 text-primary mt-3">
+<span class="text-4xl font-black leading-tight tracking-tight">₦40,000</span>
+<span class="text-sm font-medium text-text-body">starting at</span>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<div class="text-sm font-bold flex gap-3 text-text-main items-center">
+<span class="material-symbols-outlined text-primary text-[22px]">check_circle</span>
+                                Everything in Full Waggie
+                            </div>
+<div class="text-sm font-medium flex gap-3 text-text-body items-center">
+<span class="material-symbols-outlined text-primary text-[20px] bg-primary-light rounded-full p-0.5">check</span>
+                                Breed-Specific Cut
+                            </div>
+<div class="text-sm font-medium flex gap-3 text-text-body items-center">
+<span class="material-symbols-outlined text-primary text-[20px] bg-primary-light rounded-full p-0.5">check</span>
+                                Luxury Conditioning
+                            </div>
+<div class="text-sm font-medium flex gap-3 text-text-body items-center">
+<span class="material-symbols-outlined text-primary text-[20px] bg-primary-light rounded-full p-0.5">check</span>
+                                Teeth Brushing
+                            </div>
+<div class="text-sm font-medium flex gap-3 text-text-body items-center">
+<span class="material-symbols-outlined text-primary text-[20px] bg-primary-light rounded-full p-0.5">check</span>
+                                Paw Balm Application
+                            </div>
+</div>
+<button class="mt-4 flex w-full cursor-pointer items-center justify-center rounded-xl h-12 px-4 bg-slate-900 hover:bg-slate-800 text-white text-sm font-bold leading-normal transition-colors">
+                            Select Package
+                        </button>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full py-16 px-4 flex justify-center bg-white">
+<div class="max-w-[960px] w-full">
+<div class="flex items-center gap-4 mb-8">
+<div class="h-px flex-1 bg-border-light"></div>
+<h2 class="text-text-main tracking-tight text-2xl font-bold leading-tight text-center uppercase text-sm tracking-widest text-primary">Luxury Add-Ons</h2>
+<div class="h-px flex-1 bg-border-light"></div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+<div class="bg-white border border-border-light p-6 rounded-2xl flex flex-col items-center gap-4 text-center hover:border-primary hover:shadow-lg transition-all cursor-default group">
+<div class="size-12 rounded-full bg-primary-light flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">pest_control</span>
+</div>
+<div>
+<h4 class="text-text-main font-bold text-base">Flea &amp; Tick</h4>
+<p class="text-primary font-bold text-sm mt-1">₦5,000</p>
+</div>
+</div>
+<div class="bg-white border border-border-light p-6 rounded-2xl flex flex-col items-center gap-4 text-center hover:border-primary hover:shadow-lg transition-all cursor-default group">
+<div class="size-12 rounded-full bg-primary-light flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">content_cut</span>
+</div>
+<div>
+<h4 class="text-text-main font-bold text-base">De-Shedding</h4>
+<p class="text-primary font-bold text-sm mt-1">₦7,500</p>
+</div>
+</div>
+<div class="bg-white border border-border-light p-6 rounded-2xl flex flex-col items-center gap-4 text-center hover:border-primary hover:shadow-lg transition-all cursor-default group">
+<div class="size-12 rounded-full bg-primary-light flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">dentistry</span>
+</div>
+<div>
+<h4 class="text-text-main font-bold text-base">Teeth Brushing</h4>
+<p class="text-primary font-bold text-sm mt-1">₦3,000</p>
+</div>
+</div>
+<div class="bg-white border border-border-light p-6 rounded-2xl flex flex-col items-center gap-4 text-center hover:border-primary hover:shadow-lg transition-all cursor-default group">
+<div class="size-12 rounded-full bg-primary-light flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">spa</span>
+</div>
+<div>
+<h4 class="text-text-main font-bold text-base">Blueberry Facial</h4>
+<p class="text-primary font-bold text-sm mt-1">₦4,000</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full py-20 px-4 md:px-10 flex flex-col items-center bg-background-alt">
+<div class="max-w-[1100px] w-full">
+<h2 class="text-text-main text-3xl md:text-4xl font-bold text-center mb-4">Our Happy Clients</h2>
+<p class="text-text-body text-center mb-12 max-w-2xl mx-auto">Browse our gallery to see the transformations and happy smiles of pets we've had the pleasure of grooming.</p>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 h-[400px] md:h-[600px]">
+<div class="col-span-2 md:col-span-2 row-span-2 rounded-2xl overflow-hidden relative group shadow-lg">
+<img alt="White poodle with a fluffy rounded haircut looking proud" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="White poodle with a fluffy rounded haircut looking proud" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZIolAHj8fgEsbVZMj9BqSPkyQcHoIFCJFCaBZfF8jJSZRqhK-GeZE82HeemxJeQw7TP60mT8prsmUo73RDOQVl-ab-gSx_mltiNJxIhBl4_pg-P2vwCYkOWyjWHq3-KNUnL5CLuQYVYDovdEIrUvsFLT7n23fCXmrnnSHnTL17zBgVzZ7iSWXGJ68Z6ZlG9E5cNcXkL0TEwZswOaer3oSsENUCnESQq_Z1_I7wzP3TqOmA3BNldU_uY42NoDdK32Iuw7Y_9Hf0N1-"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+<div>
+<span class="text-white font-bold text-2xl block">Bella</span>
+<span class="text-white/90 text-sm font-medium">Standard Poodle • The Showstopper</span>
+</div>
+</div>
+</div>
+<div class="rounded-2xl overflow-hidden relative group shadow-lg">
+<img alt="Golden Retriever puppy after a bath looking clean" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Golden Retriever puppy after a bath looking clean" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDq6wcpCcosSkLtK4kKUZomBqttSS1L87rJRLlr6TMCV8HAwTwPTo9VZw826fW64noWfOPGiTkoO-S1QUew_6AOfGsAICquG6XCROnin0WRMBtsFNPvKSiCEwxts4a9ZfnhtBXaGMx1KgyvT6T9SwxYTeB7ECpdknkb8qF9Axe4QmNAVd3YhlDyxl_B5AfgcLlf4LpeXzKXSZb9vJINewUiE1GxmZLYtD4qXOJFlJOjiQyYfCOQJULkuZnIuvIM7Q0b-xYDPeu92xtz"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+</div>
+<div class="rounded-2xl overflow-hidden relative group shadow-lg">
+<img alt="Pomeranian with a rounded teddy bear cut" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Pomeranian with a rounded teddy bear cut" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAre6YiwG6tLzT2i445pw59ZfK0MGxPQ-05aLlTeVch5NdvXEJMEGFXPw-yXgeU2m1aOHGPR992zG6vswe9zxU4io0tZdZwHa7A7iu2OMNINyi_OoYDQLgpMHqI_CACj5SdS8cJF5zcm0-XIc4ePRsrT58Cv10WZ9oU8P-1cSv90kRdYRl2NcWXitOIQxpLz0L0ahVCVHuiW70wmcHH7jl9_Yu7czdpJ_9PDVnhq0M-ysdpgJw2QbnxLk21hS1HreVqOkkIDX64Zwt0"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+</div>
+<div class="col-span-2 md:col-span-2 rounded-2xl overflow-hidden relative group shadow-lg">
+<img alt="Close up of a dog with shiny, brushed fur and a happy expression" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Close up of a dog with shiny, brushed fur and a happy expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2uRMwf2Vna-ej6Sp0STczpmPYkK-KqvmjWeFucDY6ZXGNkME4VksrkJ-SOlaSFG89TcQ8zFi4ZhML_kgWx6kgD2Rsh517w8P8NOdExo719iu8U0hV5TqrTQoOPueOv_KRKBy_A2dmfdKlgKcxZo8RNDzUPtwd8Wm6jvww6Y8xW9d_UdapWw2lCV0-GEJxlQ-HNif4Te1SVy5zS1A_NkGO1a54eMUSvQr_COjC1qFvTeGdT-qZWJKj7xp6DYe9alC8G1UDRQTyTgat"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full py-20 px-4 flex justify-center bg-white">
+<div class="max-w-[800px] w-full flex flex-col gap-8">
+<h2 class="text-text-main text-3xl font-bold text-center">Frequently Asked Questions</h2>
+<div class="flex flex-col gap-4">
+<details class="group bg-white rounded-xl border border-border-light open:border-primary/50 open:ring-1 open:ring-primary/20 shadow-sm transition-all duration-300">
+<summary class="flex items-center justify-between p-6 cursor-pointer list-none text-text-main font-bold hover:text-primary transition-colors">
+<span class="text-lg">How long does a grooming session take?</span>
+<span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-primary">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-text-body text-base leading-relaxed">
+                            A typical full grooming session takes between 2 to 4 hours, depending on the size of your pet, breed, and coat condition. We prioritize your pet's comfort and will never rush the process to ensure a positive experience.
+                        </div>
+</details>
+<details class="group bg-white rounded-xl border border-border-light open:border-primary/50 open:ring-1 open:ring-primary/20 shadow-sm transition-all duration-300">
+<summary class="flex items-center justify-between p-6 cursor-pointer list-none text-text-main font-bold hover:text-primary transition-colors">
+<span class="text-lg">Do you sedate pets for grooming?</span>
+<span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-primary">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-text-body text-base leading-relaxed">
+                            No, Waggies maintains a strict <strong>no-sedation policy</strong>. We use patience, positive reinforcement, and gentle handling techniques. If a pet is too aggressive or stressed, we will stop the service for their safety and discuss options with you.
+                        </div>
+</details>
+<details class="group bg-white rounded-xl border border-border-light open:border-primary/50 open:ring-1 open:ring-primary/20 shadow-sm transition-all duration-300">
+<summary class="flex items-center justify-between p-6 cursor-pointer list-none text-text-main font-bold hover:text-primary transition-colors">
+<span class="text-lg">Can I stay with my dog during the grooming?</span>
+<span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-primary">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-text-body text-base leading-relaxed">
+                            For safety reasons, we recommend owners do not stay in the grooming area as dogs often get excited or anxious seeing their owners, which can make working with sharp tools dangerous. You are welcome to wait in our comfortable reception area.
+                        </div>
+</details>
+</div>
+</div>
+</div>
+<div class="w-full py-20 px-4 bg-background-alt">
+<div class="max-w-[1100px] mx-auto bg-gradient-to-r from-primary to-[#5a0ca8] rounded-3xl p-8 md:p-16 flex flex-col md:flex-row items-center justify-between gap-10 relative overflow-hidden shadow-2xl">
+<div class="absolute top-0 right-0 w-96 h-96 bg-white opacity-10 rounded-full -translate-y-1/2 translate-x-1/3 blur-3xl"></div>
+<div class="absolute bottom-0 left-0 w-64 h-64 bg-purple-300 opacity-20 rounded-full translate-y-1/2 -translate-x-1/3 blur-2xl"></div>
+<div class="relative z-10 text-center md:text-left max-w-xl">
+<h2 class="text-white text-3xl md:text-4xl font-black tracking-tight mb-4">Ready for a Paw-fect Look?</h2>
+<p class="text-purple-100 text-lg leading-relaxed">Book your appointment today and let our certified stylists pamper your pet with the luxury they deserve.</p>
+</div>
+<button class="relative z-10 flex min-w-[180px] cursor-pointer items-center justify-center rounded-full h-14 px-8 bg-white text-primary text-lg font-bold leading-normal shadow-lg transition-transform hover:scale-105 hover:bg-gray-50">
+                    Book Now
+                </button>
+</div>
+</div>
+<footer class="w-full bg-[#2e1065] text-white py-16 px-6">
+<div class="max-w-[1100px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-1 flex flex-col gap-6">
+<div class="flex items-center gap-2 text-white">
+<div class="size-8 text-white flex items-center justify-center bg-primary rounded-lg">
+<span class="material-symbols-outlined text-xl">pets</span>
+</div>
+<span class="font-bold text-2xl tracking-tight">Waggies</span>
+</div>
+<p class="text-purple-200 text-sm leading-relaxed">Premium pet care services in the heart of Abuja. We treat your pets like family with world-class facilities and loving care.</p>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6 text-lg">Services</h4>
+<ul class="flex flex-col gap-3 text-sm text-purple-200">
+<li><a class="hover:text-white hover:translate-x-1 transition-all inline-block" href="#">Grooming</a></li>
+<li><a class="hover:text-white hover:translate-x-1 transition-all inline-block" href="#">Boarding</a></li>
+<li><a class="hover:text-white hover:translate-x-1 transition-all inline-block" href="#">Vet Care</a></li>
+<li><a class="hover:text-white hover:translate-x-1 transition-all inline-block" href="#">Training</a></li>
+<li><a class="hover:text-white hover:translate-x-1 transition-all inline-block" href="#">Relocation</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6 text-lg">Company</h4>
+<ul class="flex flex-col gap-3 text-sm text-purple-200">
+<li><a class="hover:text-white hover:translate-x-1 transition-all inline-block" href="#">About Us</a></li>
+<li><a class="hover:text-white hover:translate-x-1 transition-all inline-block" href="#">Careers</a></li>
+<li><a class="hover:text-white hover:translate-x-1 transition-all inline-block" href="#">Blog</a></li>
+<li><a class="hover:text-white hover:translate-x-1 transition-all inline-block" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6 text-lg">Contact</h4>
+<ul class="flex flex-col gap-4 text-sm text-purple-200">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-xl mt-0.5 text-primary-light">location_on</span>
+<span>123 Waggies Lane,<br/>Maitama, Abuja, Nigeria</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-xl text-primary-light">phone</span>
+                            +234 800 WAGGIES
+                        </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-xl text-primary-light">mail</span>
+                            hello@waggies.ng
+                        </li>
+</ul>
+</div>
+</div>
+<div class="max-w-[1100px] mx-auto mt-16 pt-8 border-t border-purple-800/50 flex flex-col md:flex-row justify-between items-center gap-4 text-purple-300 text-xs">
+<span>© 2025 Waggies Pet Services. All rights reserved.</span>
+<div class="flex gap-6">
+<a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+</div>
+
+</body></html>

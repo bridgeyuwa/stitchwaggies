@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Loyalty Programs - Waggies Pet Services</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#7f13ec",
+              "primary-soft": "#f4ebff",
+              "background-light": "#ffffff",
+              "background-dark": "#ffffff", /* Forcing light mode appearance */
+              "text-main": "#141118",
+              "text-muted": "#6b5c7c",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"],
+              "body": ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+                "DEFAULT": "0.5rem",
+                "lg": "0.75rem",
+                "xl": "1rem",
+                "2xl": "1.5rem",
+                "full": "9999px"
+            },
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background-light text-text-main font-display antialiased overflow-x-hidden">
+<div class="relative flex min-h-screen w-full flex-col bg-white">
+<!-- Navigation -->
+<header class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-sm border-b border-[#f2f0f4]">
+<div class="flex items-center justify-between px-4 py-4 max-w-7xl mx-auto w-full md:px-8">
+<div class="flex items-center gap-3">
+<div class="size-8 text-primary">
+<span class="material-symbols-outlined text-3xl">pets</span>
+</div>
+<h2 class="text-[#141118] text-xl font-bold tracking-tight">Waggies</h2>
+</div>
+<nav class="hidden md:flex flex-1 justify-center gap-8">
+<a class="text-[#141118] text-sm font-medium hover:text-primary transition-colors" href="#">Services</a>
+<a class="text-primary text-sm font-bold" href="#">Loyalty Program</a>
+<a class="text-[#141118] text-sm font-medium hover:text-primary transition-colors" href="#">About Us</a>
+<a class="text-[#141118] text-sm font-medium hover:text-primary transition-colors" href="#">Contact</a>
+</nav>
+<div class="flex gap-3">
+<button class="hidden md:flex h-10 px-5 items-center justify-center rounded-lg bg-primary-soft text-primary text-sm font-bold hover:bg-[#ebdcfc] transition-colors">
+                        Login
+                    </button>
+<button class="flex h-10 px-5 items-center justify-center rounded-lg bg-primary text-white text-sm font-bold shadow-md hover:bg-[#6b10c6] transition-colors">
+                        Book Now
+                    </button>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<div class="w-full bg-white">
+<div class="max-w-7xl mx-auto px-4 py-12 md:px-8 md:py-20">
+<div class="flex flex-col gap-10 lg:flex-row lg:items-center">
+<div class="flex flex-col gap-6 flex-1 lg:max-w-xl">
+<div class="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary-soft px-3 py-1 w-fit">
+<span class="material-symbols-outlined text-primary text-sm">stars</span>
+<span class="text-primary text-xs font-bold uppercase tracking-wide">New: Sign-up Bonus</span>
+</div>
+<h1 class="text-4xl font-black leading-tight tracking-[-0.033em] text-[#141118] md:text-5xl lg:text-6xl">
+                            Waggies Rewards: Because They Deserve the Best
+                        </h1>
+<p class="text-lg text-text-muted leading-relaxed">
+                            Join the premier loyalty program for pet owners in Abuja. Earn points on every grooming session, boarding stay, and vet visit.
+                        </p>
+<div class="flex flex-col gap-3 sm:flex-row">
+<button class="h-12 px-8 rounded-lg bg-primary text-white text-base font-bold shadow-lg hover:bg-[#6b10c6] transition-colors flex items-center justify-center gap-2">
+                                Start Earning Today
+                                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+<button class="h-12 px-8 rounded-lg border border-[#e0dbe6] bg-white text-[#141118] text-base font-bold hover:bg-gray-50 transition-colors">
+                                Check My Balance
+                            </button>
+</div>
+<p class="text-sm text-text-muted mt-2">
+<span class="material-symbols-outlined align-middle text-sm mr-1">check_circle</span>
+                            Free to join. Get 500 bonus points instantly.
+                        </p>
+</div>
+<div class="flex-1 w-full h-[300px] md:h-[500px] lg:h-[500px]">
+<div class="w-full h-full rounded-2xl bg-center bg-cover shadow-2xl overflow-hidden relative" data-alt="Happy golden retriever dog smiling at camera representing satisfied pet customer" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBr0b1bm26yVgTvdjrlo7_Yj2HZWLMRxBddVTCa0msVOw9ckYVu-2KC_utaiVBdh1eHQ1rj1F96BRA59vq9BDQkOhgtnt2LzFZku2hUivz9opb9Q6Ur4c7_zGfEY_K5Ed8tATGSPUKVGGJQDroR6NHRCtert6-dd3aCvoJ-YklGKnYE-JynEiFO5uSTXsgSef9NLQKSdOjM0MPxXDYgojXJ1dDAZGaAuVFV-_oV4iRyEAQLxKfe1OT_VZOHfYewOtMDYX5nyo2ow_aV');">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- How It Works -->
+<div class="w-full bg-[#fcfaff] py-16">
+<div class="max-w-7xl mx-auto px-4 md:px-8">
+<div class="flex flex-col items-center text-center gap-4 mb-12">
+<h2 class="text-3xl font-bold tracking-tight text-[#141118] md:text-4xl">How It Works</h2>
+<p class="text-text-muted text-lg max-w-2xl">Start earning rewards in three simple steps. We make it easy to spoil your furry friend.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Step 1 -->
+<div class="flex flex-col items-center text-center p-8 rounded-2xl bg-white border border-[#e0dbe6] shadow-sm hover:shadow-md transition-shadow">
+<div class="w-16 h-16 rounded-full bg-primary-soft flex items-center justify-center mb-6 text-primary">
+<span class="material-symbols-outlined text-3xl">person_add</span>
+</div>
+<h3 class="text-xl font-bold text-[#141118] mb-2">1. Join the Pack</h3>
+<p class="text-text-muted">Sign up for free instantly via our website or app and receive a welcome bonus of 500 points.</p>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col items-center text-center p-8 rounded-2xl bg-white border border-[#e0dbe6] shadow-sm hover:shadow-md transition-shadow">
+<div class="w-16 h-16 rounded-full bg-primary-soft flex items-center justify-center mb-6 text-primary">
+<span class="material-symbols-outlined text-3xl">loyalty</span>
+</div>
+<h3 class="text-xl font-bold text-[#141118] mb-2">2. Earn Points</h3>
+<p class="text-text-muted">Earn 1 point for every ₦1,000 spent on any service, from grooming to relocation.</p>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col items-center text-center p-8 rounded-2xl bg-white border border-[#e0dbe6] shadow-sm hover:shadow-md transition-shadow">
+<div class="w-16 h-16 rounded-full bg-primary-soft flex items-center justify-center mb-6 text-primary">
+<span class="material-symbols-outlined text-3xl">redeem</span>
+</div>
+<h3 class="text-xl font-bold text-[#141118] mb-2">3. Redeem Rewards</h3>
+<p class="text-text-muted">Use your points for free grooming sessions, boarding discounts, and exclusive treats.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Redemption Showcase -->
+<div class="w-full bg-white py-16">
+<div class="max-w-7xl mx-auto px-4 md:px-8">
+<div class="bg-primary rounded-3xl overflow-hidden shadow-xl flex flex-col md:flex-row text-white">
+<div class="flex-1 p-8 md:p-12 flex flex-col justify-center gap-6">
+<h2 class="text-3xl font-bold">Turn Points into Perks</h2>
+<p class="text-purple-100 text-lg">Your loyalty goes a long way. Check out what you can redeem right now.</p>
+<div class="space-y-4">
+<div class="flex items-center gap-4 bg-white/10 p-4 rounded-xl backdrop-blur-sm">
+<span class="font-black text-2xl text-[#fff]">500 pts</span>
+<div class="h-8 w-px bg-white/20"></div>
+<span class="font-medium text-lg">Free Premium Nail Trim</span>
+</div>
+<div class="flex items-center gap-4 bg-white/10 p-4 rounded-xl backdrop-blur-sm">
+<span class="font-black text-2xl text-[#fff]">1,000 pts</span>
+<div class="h-8 w-px bg-white/20"></div>
+<span class="font-medium text-lg">10% Off Next Boarding Stay</span>
+</div>
+<div class="flex items-center gap-4 bg-white/10 p-4 rounded-xl backdrop-blur-sm">
+<span class="font-black text-2xl text-[#fff]">5,000 pts</span>
+<div class="h-8 w-px bg-white/20"></div>
+<span class="font-medium text-lg">Free Full Grooming Session</span>
+</div>
+</div>
+</div>
+<div class="flex-1 min-h-[300px] md:min-h-auto bg-cover bg-center" data-alt="Cute dog receiving a treat from owner's hand" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC1QmtEBh3pH7cTW5mid573-9oF127p7SX_unoV2mLcHH5RYuxA6TJXRGcEGViiqi4WxmDxnAmzLP5Sb6ZWdWt5J5XlT737_bQAvtuGtVGBcDv6BFKBpTFwD_GZ0uKvbYzU4bhKUqxG_SfgXEI55SeKiiB9O-_jrleVHiGwwDPRZWuX7p22zavUZzc22Pnpi6mTRckayWLxasseTneLAGsiUTSruC3X716zpLgUgZvzqr9qvcig0HDt97y39rEwPi3uFnfEhLyst8IQ');">
+</div>
+</div>
+</div>
+</div>
+<!-- Tiers Section -->
+<div class="w-full bg-[#fcfaff] py-16">
+<div class="max-w-7xl mx-auto px-4 md:px-8">
+<div class="text-center mb-10">
+<h2 class="text-3xl font-bold text-[#141118]">Membership Tiers</h2>
+<p class="text-text-muted mt-2">The more you visit, the better it gets.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Bronze -->
+<div class="flex flex-col gap-6 rounded-2xl border border-[#e0dbe6] bg-white p-6 hover:border-primary/30 transition-colors">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-[#cd7f32]">pets</span>
+<h3 class="text-lg font-bold text-[#141118]">Bronze Paws</h3>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="text-4xl font-black text-[#141118]">0+</span>
+<span class="text-sm font-bold text-text-muted">points</span>
+</div>
+<p class="text-sm text-text-muted">Start here immediately upon signup.</p>
+</div>
+<button class="w-full h-10 rounded-lg bg-primary-soft text-primary text-sm font-bold hover:bg-[#ebdcfc]">Current Level</button>
+<ul class="space-y-3">
+<li class="flex items-center gap-3 text-sm text-[#141118]">
+<span class="material-symbols-outlined text-green-500 text-base">check_circle</span>
+                                Earn 1pt per ₦1,000 spent
+                            </li>
+<li class="flex items-center gap-3 text-sm text-[#141118]">
+<span class="material-symbols-outlined text-green-500 text-base">check_circle</span>
+                                Birthday Treat
+                            </li>
+<li class="flex items-center gap-3 text-sm text-[#141118]">
+<span class="material-symbols-outlined text-green-500 text-base">check_circle</span>
+                                Access to Standard Offers
+                            </li>
+</ul>
+</div>
+<!-- Silver -->
+<div class="flex flex-col gap-6 rounded-2xl border-2 border-primary/20 bg-white p-6 relative overflow-hidden shadow-lg">
+<div class="absolute top-0 right-0 bg-primary text-white text-xs font-bold px-3 py-1 rounded-bl-lg">Most Popular</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-[#c0c0c0]">pets</span>
+<h3 class="text-lg font-bold text-[#141118]">Silver Paws</h3>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="text-4xl font-black text-[#141118]">1,000+</span>
+<span class="text-sm font-bold text-text-muted">points</span>
+</div>
+<p class="text-sm text-text-muted">Unlocked after your first few visits.</p>
+</div>
+<button class="w-full h-10 rounded-lg border border-primary text-primary text-sm font-bold hover:bg-primary-soft">View Details</button>
+<ul class="space-y-3">
+<li class="flex items-center gap-3 text-sm text-[#141118]">
+<span class="material-symbols-outlined text-green-500 text-base">check_circle</span>
+<strong>Earn 1.5pt</strong> per ₦1,000 spent
+                            </li>
+<li class="flex items-center gap-3 text-sm text-[#141118]">
+<span class="material-symbols-outlined text-green-500 text-base">check_circle</span>
+                                10% off Grooming Services
+                            </li>
+<li class="flex items-center gap-3 text-sm text-[#141118]">
+<span class="material-symbols-outlined text-green-500 text-base">check_circle</span>
+                                Priority Waitlist for Boarding
+                            </li>
+</ul>
+</div>
+<!-- Gold -->
+<div class="flex flex-col gap-6 rounded-2xl border border-[#e0dbe6] bg-white p-6 hover:border-primary/30 transition-colors">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-[#ffd700]">pets</span>
+<h3 class="text-lg font-bold text-[#141118]">Gold Paws</h3>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="text-4xl font-black text-[#141118]">5,000+</span>
+<span class="text-sm font-bold text-text-muted">points</span>
+</div>
+<p class="text-sm text-text-muted">VIP Status for our top furry clients.</p>
+</div>
+<button class="w-full h-10 rounded-lg border border-[#e0dbe6] bg-white text-[#141118] text-sm font-bold hover:bg-gray-50">View Details</button>
+<ul class="space-y-3">
+<li class="flex items-center gap-3 text-sm text-[#141118]">
+<span class="material-symbols-outlined text-green-500 text-base">check_circle</span>
+<strong>Earn 2pt</strong> per ₦1,000 spent
+                            </li>
+<li class="flex items-center gap-3 text-sm text-[#141118]">
+<span class="material-symbols-outlined text-green-500 text-base">check_circle</span>
+                                Free Annual Checkup
+                            </li>
+<li class="flex items-center gap-3 text-sm text-[#141118]">
+<span class="material-symbols-outlined text-green-500 text-base">check_circle</span>
+                                Priority Holiday Booking
+                            </li>
+<li class="flex items-center gap-3 text-sm text-[#141118]">
+<span class="material-symbols-outlined text-green-500 text-base">check_circle</span>
+                                Free Relocation Consult
+                            </li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- Dashboard Preview & Tracking -->
+<div class="w-full bg-white py-16 border-t border-[#f2f0f4]">
+<div class="max-w-7xl mx-auto px-4 md:px-8">
+<div class="flex flex-col lg:flex-row items-center gap-12">
+<div class="flex-1 flex flex-col gap-6">
+<h2 class="text-3xl font-bold text-[#141118]">Track Your Rewards on the Go</h2>
+<p class="text-lg text-text-muted">
+                            Never lose track of your points. Log in to your personal dashboard to see your balance, view upcoming rewards, and book your next appointment instantly.
+                        </p>
+<div class="flex flex-col gap-4">
+<div class="flex items-start gap-4">
+<div class="bg-primary-soft p-2 rounded-lg text-primary">
+<span class="material-symbols-outlined">visibility</span>
+</div>
+<div>
+<h4 class="font-bold text-[#141118]">Real-time Balance</h4>
+<p class="text-sm text-text-muted">Points update immediately after checkout.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="bg-primary-soft p-2 rounded-lg text-primary">
+<span class="material-symbols-outlined">history</span>
+</div>
+<div>
+<h4 class="font-bold text-[#141118]">History &amp; Receipts</h4>
+<p class="text-sm text-text-muted">View all past visits and points earned.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex-1 flex justify-center lg:justify-end">
+<div class="relative w-[300px] h-[580px] bg-gray-900 rounded-[3rem] border-8 border-gray-900 shadow-2xl overflow-hidden">
+<!-- Fake Mobile Screen -->
+<div class="w-full h-full bg-background-light flex flex-col relative">
+<div class="absolute top-0 w-full h-6 bg-gray-900/10 z-20"></div>
+<div class="bg-primary h-40 rounded-b-[2rem] p-6 text-white flex flex-col justify-end shadow-md relative z-10">
+<p class="text-sm opacity-80">Hello, Max</p>
+<h3 class="text-3xl font-bold">1,250 pts</h3>
+<p class="text-xs mt-1">Silver Member</p>
+</div>
+<div class="p-4 flex flex-col gap-4 overflow-hidden">
+<div class="h-24 bg-primary-soft rounded-xl p-4 flex items-center justify-between">
+<div>
+<p class="font-bold text-primary text-sm">Reward Unlocked!</p>
+<p class="text-xs text-[#141118]">Free Nail Trim</p>
+</div>
+<button class="bg-primary text-white text-xs px-3 py-1.5 rounded-md">Redeem</button>
+</div>
+<div class="space-y-2">
+<p class="text-xs font-bold text-gray-400 uppercase tracking-wider">Recent Activity</p>
+<div class="flex justify-between items-center text-sm p-3 bg-white border border-gray-100 rounded-lg shadow-sm">
+<span class="text-[#141118]">Grooming Session</span>
+<span class="font-bold text-green-600">+150 pts</span>
+</div>
+<div class="flex justify-between items-center text-sm p-3 bg-white border border-gray-100 rounded-lg shadow-sm">
+<span class="text-[#141118]">Boarding (3 Days)</span>
+<span class="font-bold text-green-600">+450 pts</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Referral Section -->
+<div class="w-full bg-[#f4ebff] py-16">
+<div class="max-w-7xl mx-auto px-4 md:px-8 text-center">
+<div class="max-w-3xl mx-auto flex flex-col items-center gap-6">
+<span class="material-symbols-outlined text-6xl text-primary">handshake</span>
+<h2 class="text-3xl md:text-4xl font-bold text-[#141118]">Share the Love, Get Rewarded</h2>
+<p class="text-lg text-text-muted">
+                        Love Waggies? Tell a friend! When you refer a new client for any service, you both get <span class="font-bold text-primary">10% off</span> your next visit.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4 w-full justify-center mt-4">
+<button class="h-12 px-8 rounded-lg bg-primary text-white text-base font-bold shadow-md hover:bg-[#6b10c6] transition-colors">
+                            Get My Referral Link
+                        </button>
+<button class="h-12 px-8 rounded-lg border border-primary text-primary bg-white text-base font-bold hover:bg-gray-50 transition-colors">
+                            Read Terms
+                        </button>
+</div>
+</div>
+</div>
+</div>
+<!-- FAQ Section -->
+<div class="w-full bg-white py-16">
+<div class="max-w-3xl mx-auto px-4 md:px-8">
+<h2 class="text-2xl font-bold text-[#141118] mb-8 text-center">Frequently Asked Questions</h2>
+<div class="flex flex-col gap-4">
+<details class="group rounded-lg border border-[#e0dbe6] bg-white p-4 open:bg-gray-50">
+<summary class="flex cursor-pointer items-center justify-between font-bold text-[#141118]">
+<span>Do my points expire?</span>
+<span class="material-symbols-outlined transition group-open:rotate-180">expand_more</span>
+</summary>
+<div class="mt-4 text-sm text-text-muted leading-relaxed">
+                            Points are valid for 12 months from the date they are earned. As long as you book at least one service a year, your account remains active!
+                        </div>
+</details>
+<details class="group rounded-lg border border-[#e0dbe6] bg-white p-4 open:bg-gray-50">
+<summary class="flex cursor-pointer items-center justify-between font-bold text-[#141118]">
+<span>Can I use points for Vet services?</span>
+<span class="material-symbols-outlined transition group-open:rotate-180">expand_more</span>
+</summary>
+<div class="mt-4 text-sm text-text-muted leading-relaxed">
+                            Yes! You earn points on Vet consultations and can redeem them for discounts on future checkups. However, points cannot be used for prescription medications.
+                        </div>
+</details>
+<details class="group rounded-lg border border-[#e0dbe6] bg-white p-4 open:bg-gray-50">
+<summary class="flex cursor-pointer items-center justify-between font-bold text-[#141118]">
+<span>How do I redeem my points?</span>
+<span class="material-symbols-outlined transition group-open:rotate-180">expand_more</span>
+</summary>
+<div class="mt-4 text-sm text-text-muted leading-relaxed">
+                            Simply let our staff know at checkout, or select "Redeem Points" when booking online through your dashboard.
+                        </div>
+</details>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="bg-[#141118] text-white py-12">
+<div class="max-w-7xl mx-auto px-4 md:px-8">
+<div class="flex flex-col md:flex-row justify-between gap-8">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-2xl text-primary">pets</span>
+<h3 class="text-xl font-bold">Waggies</h3>
+</div>
+<p class="text-gray-400 text-sm max-w-xs">Premium pet care services in Abuja. Boarding, Grooming, Vet Care &amp; More.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+<div class="flex flex-col gap-2">
+<h4 class="font-bold text-sm uppercase tracking-wider text-gray-500">Company</h4>
+<a class="text-sm hover:text-primary" href="#">About Us</a>
+<a class="text-sm hover:text-primary" href="#">Careers</a>
+<a class="text-sm hover:text-primary" href="#">Contact</a>
+</div>
+<div class="flex flex-col gap-2">
+<h4 class="font-bold text-sm uppercase tracking-wider text-gray-500">Services</h4>
+<a class="text-sm hover:text-primary" href="#">Grooming</a>
+<a class="text-sm hover:text-primary" href="#">Boarding</a>
+<a class="text-sm hover:text-primary" href="#">Relocation</a>
+</div>
+<div class="flex flex-col gap-2">
+<h4 class="font-bold text-sm uppercase tracking-wider text-gray-500">Legal</h4>
+<a class="text-sm hover:text-primary" href="#">Privacy Policy</a>
+<a class="text-sm hover:text-primary" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+<div class="mt-12 pt-8 border-t border-gray-800 text-center text-sm text-gray-500">
+                    © 2025 Waggies Pet Services. All rights reserved.
+                </div>
+</div>
+</footer>
+</div>
+</body></html>

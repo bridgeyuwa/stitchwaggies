@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Waggies Pet Services - Pricing &amp; Calculator</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#7c3aed", // Violet 600
+                        "primary-hover": "#6d28d9", // Violet 700
+                        "secondary": "#f5f3ff", // Violet 50
+                        "accent": "#8b5cf6", // Violet 500
+                        "text-main": "#1e1b4b", // Indigo 950
+                        "text-body": "#4b5563", // Gray 600
+                        "border-light": "#ddd6fe", // Violet 200
+                        "surface": "#ffffff",
+                        "surface-alt": "#faf5ff", // Very light purple
+                        "dark-purple": "#2e1065", // Violet 950
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px" },
+                    boxShadow: {
+                        "soft": "0 10px 40px -10px rgba(124, 58, 237, 0.1)",
+                        "glow": "0 0 20px rgba(139, 92, 246, 0.3)"
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-surface-alt text-text-main font-display overflow-x-hidden antialiased selection:bg-primary selection:text-white">
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-border-light bg-surface/95 backdrop-blur-sm px-4 py-3 md:px-10 shadow-sm">
+<div class="flex items-center gap-4">
+<div class="size-8 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M39.5563 34.1455V13.8546C39.5563 15.708 36.8773 17.3437 32.7927 18.3189C30.2914 18.916 27.263 19.2655 24 19.2655C20.737 19.2655 17.7086 18.916 15.2073 18.3189C11.1227 17.3437 8.44365 15.708 8.44365 13.8546V34.1455C8.44365 35.9988 11.1227 37.6346 15.2073 38.6098C17.7086 39.2069 20.737 39.5564 24 39.5564C27.263 39.5564 30.2914 39.2069 32.7927 38.6098C36.8773 37.6346 39.5563 35.9988 39.5563 34.1455Z" fill="currentColor"></path>
+<path clip-rule="evenodd" d="M10.4485 13.8519C10.4749 13.9271 10.6203 14.246 11.379 14.7361C12.298 15.3298 13.7492 15.9145 15.6717 16.3735C18.0007 16.9296 20.8712 17.2655 24 17.2655C27.1288 17.2655 29.9993 16.9296 32.3283 16.3735C34.2508 15.9145 35.702 15.3298 36.621 14.7361C37.3796 14.246 37.5251 13.9271 37.5515 13.8519C37.5287 13.7876 37.4333 13.5973 37.0635 13.2931C36.5266 12.8516 35.6288 12.3647 34.343 11.9175C31.79 11.0295 28.1333 10.4437 24 10.4437C19.8667 10.4437 16.2099 11.0295 13.657 11.9175C12.3712 12.3647 11.4734 12.8516 10.9365 13.2931C10.5667 13.5973 10.4713 13.7876 10.4485 13.8519ZM37.5563 18.7877C36.3176 19.3925 34.8502 19.8839 33.2571 20.2642C30.5836 20.9025 27.3973 21.2655 24 21.2655C20.6027 21.2655 17.4164 20.9025 14.7429 20.2642C13.1498 19.8839 11.6824 19.3925 10.4436 18.7877V34.1275C10.4515 34.1545 10.5427 34.4867 11.379 35.027C12.298 35.6207 13.7492 36.2054 15.6717 36.6644C18.0007 37.2205 20.8712 37.5564 24 37.5564C27.1288 37.5564 29.9993 37.2205 32.3283 36.6644C34.2508 36.2054 35.702 35.6207 36.621 35.027C37.4573 34.4867 37.5485 34.1546 37.5563 34.1275V18.7877ZM41.5563 13.8546V34.1455C41.5563 36.1078 40.158 37.5042 38.7915 38.3869C37.3498 39.3182 35.4192 40.0389 33.2571 40.5551C30.5836 41.1934 27.3973 41.5564 24 41.5564C20.6027 41.5564 17.4164 41.1934 14.7429 40.5551C12.5808 40.0389 10.6502 39.3182 9.20848 38.3869C7.84205 37.5042 6.44365 36.1078 6.44365 34.1455L6.44365 13.8546C6.44365 12.2684 7.37223 11.0454 8.39581 10.2036C9.43325 9.3505 10.8137 8.67141 12.343 8.13948C15.4203 7.06909 19.5418 6.44366 24 6.44366C28.4582 6.44366 32.5797 7.06909 35.657 8.13948C37.1863 8.67141 38.5667 9.3505 39.6042 10.2036C40.6278 11.0454 41.5563 12.2684 41.5563 13.8546Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-lg font-extrabold leading-tight tracking-[-0.015em] hidden md:block text-text-main">Waggies Pet Services</h2>
+</div>
+<div class="flex flex-1 justify-end gap-4 md:gap-8">
+<div class="hidden md:flex items-center gap-9">
+<a class="text-sm font-semibold leading-normal hover:text-primary transition-colors text-text-body" href="#">Home</a>
+<a class="text-sm font-semibold leading-normal hover:text-primary transition-colors text-text-body" href="#">Services</a>
+<a class="text-sm font-bold leading-normal text-primary" href="#">Pricing</a>
+<a class="text-sm font-semibold leading-normal hover:text-primary transition-colors text-text-body" href="#">About Us</a>
+<a class="text-sm font-semibold leading-normal hover:text-primary transition-colors text-text-body" href="#">Contact</a>
+</div>
+<div class="flex gap-2">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold hover:bg-primary-hover shadow-lg shadow-primary/20 transition-all">
+<span class="truncate">Book Now</span>
+</button>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-secondary text-primary text-sm font-bold hover:bg-border-light transition-all border border-border-light">
+<span class="truncate">Log In</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex flex-col items-center">
+<section class="w-full max-w-7xl px-4 md:px-10 py-8">
+<div class="w-full rounded-3xl overflow-hidden relative min-h-[500px] flex items-center justify-center bg-cover bg-center shadow-2xl" data-alt="A happy dog sitting in a lush green park looking at the camera" style='background-image: linear-gradient(rgba(46, 16, 101, 0.5) 0%, rgba(46, 16, 101, 0.8) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBCa8AxKBSlh-gzDFAvuMbQXsfYwV9q7vP95eFOTbRXDaijEOftG4JIXW1gbjz77DN8Kbi3VZxxxa0hPovFWCqTA-rg8_9y3NzU2IfyeuBPE7cMfpWi4a51x20aM1P0oy8quHIE9f__mKSNk8Ky0KzvqTky8QhbFlpBRBJbvfWxapttwqit3a4vydhjf22x7myfrFFy7kGOfUjuKbd5OFBR5Nn6Ff2_dC-ooS1-N8erTSJRSeO9FywPJzLWEg9pp2SSiHNjvmkfJL_S");'>
+<div class="flex flex-col gap-6 text-center max-w-3xl px-4 z-10">
+<h1 class="text-white text-4xl md:text-6xl font-black leading-tight tracking-[-0.033em] drop-shadow-md">
+                        Transparent Pricing for <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#d8b4fe] to-white">Premium Care</span>
+</h1>
+<h2 class="text-white/90 text-lg md:text-xl font-medium leading-relaxed max-w-2xl mx-auto">
+                        No hidden fees. Just world-class care for your furry family in Abuja.
+                    </h2>
+<div class="flex flex-col sm:flex-row gap-4 justify-center mt-6">
+<button class="flex items-center justify-center rounded-xl h-12 px-8 bg-primary text-white text-base font-bold hover:scale-105 transition-transform shadow-glow">
+                            See Rates Below
+                        </button>
+<button class="flex items-center justify-center rounded-xl h-12 px-8 bg-white/10 backdrop-blur-md text-white border border-white/20 text-base font-bold hover:bg-white/20 transition-all">
+                            Request Custom Quote
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<section class="w-full max-w-[960px] px-4 pt-10 pb-4 flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<h2 class="text-text-main text-3xl font-bold leading-tight tracking-[-0.015em]">Service Rate Cards</h2>
+<p class="text-text-body mt-2 font-medium">Standard pricing packages for our most popular services.</p>
+</div>
+<div class="flex items-center bg-secondary rounded-lg p-1 border border-border-light">
+<button class="px-4 py-2 rounded-md bg-white shadow-sm text-sm font-bold text-primary transition-all border border-border-light/50">NGN (₦)</button>
+<button class="px-4 py-2 rounded-md hover:bg-white/50 text-sm font-medium text-text-body transition-all">USD ($)</button>
+<button class="px-4 py-2 rounded-md hover:bg-white/50 text-sm font-medium text-text-body transition-all">GBP (£)</button>
+</div>
+</section>
+<section class="w-full max-w-[960px] px-4 pb-12">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="flex flex-col gap-4 rounded-2xl border border-solid border-border-light bg-white p-6 shadow-soft hover:shadow-glow hover:-translate-y-1 transition-all duration-300">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<h3 class="text-text-main text-xl font-bold">Boarding</h3>
+<span class="text-white text-xs font-bold uppercase tracking-wider rounded-full bg-primary px-3 py-1 shadow-sm">Popular</span>
+</div>
+<p class="flex items-baseline gap-1 mt-2">
+<span class="text-text-main text-4xl font-black tracking-tight">₦15,000</span>
+<span class="text-text-body text-sm font-medium">per night</span>
+</p>
+</div>
+<ul class="flex flex-col gap-3 py-6 border-t border-dashed border-border-light">
+<li class="flex items-start gap-3 text-sm text-text-body font-medium">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                            Luxury Suites with AC
+                        </li>
+<li class="flex items-start gap-3 text-sm text-text-body font-medium">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                            24/7 Vet Monitoring
+                        </li>
+<li class="flex items-start gap-3 text-sm text-text-body font-medium">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                            Daily Playtime &amp; Updates
+                        </li>
+</ul>
+<button class="mt-auto w-full py-3.5 rounded-xl bg-secondary text-primary border border-transparent hover:border-primary text-sm font-bold hover:bg-primary hover:text-white transition-all">
+                        Book Stay
+                    </button>
+</div>
+<div class="flex flex-col gap-4 rounded-2xl border border-solid border-border-light bg-white p-6 shadow-soft hover:shadow-glow hover:-translate-y-1 transition-all duration-300">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<h3 class="text-text-main text-xl font-bold">Grooming</h3>
+<span class="text-primary-hover text-xs font-bold uppercase tracking-wider rounded-full bg-secondary border border-border-light px-3 py-1">Best Value</span>
+</div>
+<p class="flex items-baseline gap-1 mt-2">
+<span class="text-text-main text-4xl font-black tracking-tight">₦10,000</span>
+<span class="text-text-body text-sm font-medium">starting from</span>
+</p>
+</div>
+<ul class="flex flex-col gap-3 py-6 border-t border-dashed border-border-light">
+<li class="flex items-start gap-3 text-sm text-text-body font-medium">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                            Bath, Brush &amp; Blow Dry
+                        </li>
+<li class="flex items-start gap-3 text-sm text-text-body font-medium">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                            Nail Trimming
+                        </li>
+<li class="flex items-start gap-3 text-sm text-text-body font-medium">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                            Premium Shampoo
+                        </li>
+</ul>
+<button class="mt-auto w-full py-3.5 rounded-xl bg-secondary text-primary border border-transparent hover:border-primary text-sm font-bold hover:bg-primary hover:text-white transition-all">
+                        Book Spa
+                    </button>
+</div>
+<div class="flex flex-col gap-4 rounded-2xl border border-solid border-border-light bg-white p-6 shadow-soft hover:shadow-glow hover:-translate-y-1 transition-all duration-300">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<h3 class="text-text-main text-xl font-bold">Relocation</h3>
+<span class="text-orange-700 text-xs font-bold uppercase tracking-wider rounded-full bg-orange-100 px-3 py-1">Consultation</span>
+</div>
+<p class="flex items-baseline gap-1 mt-2">
+<span class="text-text-main text-4xl font-black tracking-tight">₦50,000</span>
+<span class="text-text-body text-sm font-medium">base fee</span>
+</p>
+</div>
+<ul class="flex flex-col gap-3 py-6 border-t border-dashed border-border-light">
+<li class="flex items-start gap-3 text-sm text-text-body font-medium">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                            Import/Export Paperwork
+                        </li>
+<li class="flex items-start gap-3 text-sm text-text-body font-medium">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                            Flight Booking Assistance
+                        </li>
+<li class="flex items-start gap-3 text-sm text-text-body font-medium">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                            Crate Sizing &amp; Vet Checks
+                        </li>
+</ul>
+<button class="mt-auto w-full py-3.5 rounded-xl bg-secondary text-primary border border-transparent hover:border-primary text-sm font-bold hover:bg-primary hover:text-white transition-all">
+                        Start Process
+                    </button>
+</div>
+</div>
+</section>
+<section class="w-full max-w-[960px] px-4 mb-16">
+<div class="rounded-2xl bg-gradient-to-br from-dark-purple to-[#4c1d95] p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden shadow-2xl">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary rounded-full blur-[100px] opacity-40 -mr-16 -mt-16 pointer-events-none"></div>
+<div class="absolute bottom-0 left-0 w-48 h-48 bg-primary rounded-full blur-[80px] opacity-30 -ml-10 -mb-10 pointer-events-none"></div>
+<div class="flex-1 z-10">
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-accent">stars</span>
+<span class="text-accent font-bold uppercase tracking-wider text-sm">Waggies Points</span>
+</div>
+<h2 class="text-white text-3xl font-bold mb-3">Earn 5% Back on Every Booking</h2>
+<p class="text-violet-100 text-base max-w-lg">Join the Waggies Pack loyalty program. Collect points on boarding, grooming, and training services and redeem them for free spa days or vet consultations.</p>
+</div>
+<div class="z-10 shrink-0">
+<button class="bg-white hover:bg-gray-50 text-dark-purple font-bold py-3 px-8 rounded-xl shadow-lg transition-all transform hover:-translate-y-0.5">
+                        Join for Free
+                    </button>
+</div>
+</div>
+</section>
+<section class="w-full bg-secondary py-16 px-4 md:px-10 border-y border-border-light relative overflow-hidden">
+<div class="absolute inset-0 opacity-40" style="background-image: radial-gradient(#ddd6fe 1px, transparent 1px); background-size: 32px 32px;"></div>
+<div class="max-w-[960px] mx-auto relative z-10">
+<div class="text-center mb-10">
+<h2 class="text-text-main text-3xl font-bold mb-3">Waggies Estimate Calculator</h2>
+<p class="text-text-body max-w-2xl mx-auto font-medium">Customize your pet's needs to get an instant price estimate. Please note this is an approximation and final quotes may vary.</p>
+</div>
+<div class="flex flex-col lg:flex-row gap-8 items-start">
+<div class="w-full lg:w-2/3 bg-white rounded-2xl p-6 md:p-8 shadow-card border border-border-light/60">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="col-span-2">
+<label class="block text-sm font-bold text-text-main mb-2">Service Type</label>
+<div class="relative">
+<select class="w-full h-12 rounded-xl border-border-light bg-surface text-text-main focus:ring-2 focus:ring-primary focus:border-primary transition-all shadow-sm">
+<option>Boarding (Overnight)</option>
+<option>Grooming (Spa Day)</option>
+<option>Training Session</option>
+<option>Vet Consultation</option>
+<option>Relocation (Local)</option>
+<option>Relocation (International)</option>
+</select>
+</div>
+</div>
+<div>
+<label class="block text-sm font-bold text-text-main mb-2">Pet Type</label>
+<div class="flex gap-2">
+<button class="flex-1 py-2.5 border-2 border-primary bg-secondary text-primary font-bold rounded-xl text-sm transition-colors">Dog</button>
+<button class="flex-1 py-2.5 border border-gray-200 text-text-body font-medium rounded-xl text-sm hover:border-primary/50 hover:text-primary transition-colors">Cat</button>
+<button class="flex-1 py-2.5 border border-gray-200 text-text-body font-medium rounded-xl text-sm hover:border-primary/50 hover:text-primary transition-colors">Other</button>
+</div>
+</div>
+<div>
+<label class="block text-sm font-bold text-text-main mb-2">Pet Size</label>
+<select class="w-full h-11 rounded-xl border-border-light bg-surface text-text-main focus:ring-2 focus:ring-primary focus:border-primary transition-all shadow-sm">
+<option>Small (0-10kg)</option>
+<option>Medium (11-25kg)</option>
+<option>Large (26-40kg)</option>
+<option>Giant (40kg+)</option>
+</select>
+</div>
+<div class="col-span-2 md:col-span-1">
+<label class="block text-sm font-bold text-text-main mb-2">Duration / Quantity</label>
+<div class="flex items-center">
+<input class="w-20 h-11 rounded-l-xl border-border-light bg-surface text-text-main focus:ring-primary focus:border-primary text-center" type="number" value="3"/>
+<span class="h-11 px-4 inline-flex items-center justify-center bg-secondary border-y border-r border-border-light rounded-r-xl text-sm text-text-body font-semibold">Nights</span>
+</div>
+</div>
+<div class="col-span-2">
+<label class="block text-sm font-bold text-text-main mb-3">Add-ons</label>
+<div class="space-y-3">
+<label class="flex items-center gap-3 p-3 border border-border-light rounded-xl cursor-pointer hover:bg-secondary/50 transition-colors group">
+<input checked="" class="rounded text-primary focus:ring-primary bg-white border-gray-300 w-5 h-5" type="checkbox"/>
+<div class="flex flex-1 justify-between items-center">
+<span class="text-sm font-semibold text-text-main group-hover:text-primary transition-colors">Daily Photo Updates</span>
+<span class="text-sm font-bold text-primary">Free</span>
+</div>
+</label>
+<label class="flex items-center gap-3 p-3 border border-border-light rounded-xl cursor-pointer hover:bg-secondary/50 transition-colors group">
+<input class="rounded text-primary focus:ring-primary bg-white border-gray-300 w-5 h-5" type="checkbox"/>
+<div class="flex flex-1 justify-between items-center">
+<span class="text-sm font-semibold text-text-main group-hover:text-primary transition-colors">Exit Bath &amp; Groom</span>
+<span class="text-sm font-bold text-text-body">+₦8,000</span>
+</div>
+</label>
+<label class="flex items-center gap-3 p-3 border border-border-light rounded-xl cursor-pointer hover:bg-secondary/50 transition-colors group">
+<input class="rounded text-primary focus:ring-primary bg-white border-gray-300 w-5 h-5" type="checkbox"/>
+<div class="flex flex-1 justify-between items-center">
+<span class="text-sm font-semibold text-text-main group-hover:text-primary transition-colors">Pick-up Service (Abuja Only)</span>
+<span class="text-sm font-bold text-text-body">+₦5,000</span>
+</div>
+</label>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full lg:w-1/3 sticky top-24">
+<div class="bg-dark-purple rounded-2xl p-6 md:p-8 text-white shadow-2xl relative overflow-hidden ring-4 ring-white">
+<div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(#7c3aed 1px, transparent 1px); background-size: 20px 20px;"></div>
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary rounded-full blur-[60px] opacity-50 -mr-10 -mt-10"></div>
+<h3 class="text-lg font-medium text-violet-200 mb-6 relative z-10">Estimated Total</h3>
+<div class="flex items-baseline gap-1 mb-2 relative z-10">
+<span class="text-5xl font-black text-white tracking-tight drop-shadow-sm">₦45,000</span>
+</div>
+<p class="text-sm text-violet-200 mb-8 relative z-10">Includes taxes &amp; service fees</p>
+<div class="space-y-3 mb-8 relative z-10 border-t border-white/10 pt-6">
+<div class="flex justify-between text-sm">
+<span class="text-violet-100">3 Nights Boarding (Large)</span>
+<span class="font-bold">₦45,000</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-violet-100">Photo Updates</span>
+<span class="font-bold text-accent">Free</span>
+</div>
+</div>
+<button class="w-full py-4 rounded-xl bg-primary text-white font-bold text-base hover:bg-white hover:text-dark-purple transition-all relative z-10 mb-4 shadow-lg">
+                                Request Official Quote
+                            </button>
+<p class="text-xs text-center text-violet-300 relative z-10">
+                                Valid for 7 days. Quote ID: #EST-8821
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="w-full max-w-[800px] px-4 py-16">
+<h2 class="text-text-main text-2xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+<div class="flex flex-col gap-4">
+<details class="group rounded-xl border border-border-light bg-white open:border-primary open:ring-1 open:ring-primary transition-all duration-300">
+<summary class="flex cursor-pointer list-none items-center justify-between p-6 font-bold text-text-main">
+<span>Do you require a deposit for booking?</span>
+<span class="transition group-open:rotate-180 material-symbols-outlined text-primary">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-text-body leading-relaxed">
+                        Yes, we require a 50% deposit to secure dates for boarding and training services. This deposit is fully refundable if cancellations are made at least 48 hours prior to the check-in date.
+                    </div>
+</details>
+<details class="group rounded-xl border border-border-light bg-white open:border-primary open:ring-1 open:ring-primary transition-all duration-300">
+<summary class="flex cursor-pointer list-none items-center justify-between p-6 font-bold text-text-main">
+<span>Are there extra charges for medication administration?</span>
+<span class="transition group-open:rotate-180 material-symbols-outlined text-primary">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-text-body leading-relaxed">
+                        Standard oral medications are administered at no extra cost. For injections or complex medical care, a small daily fee may apply. Please discuss your pet's specific needs with our team during booking.
+                    </div>
+</details>
+<details class="group rounded-xl border border-border-light bg-white open:border-primary open:ring-1 open:ring-primary transition-all duration-300">
+<summary class="flex cursor-pointer list-none items-center justify-between p-6 font-bold text-text-main">
+<span>How does relocation pricing work?</span>
+<span class="transition group-open:rotate-180 material-symbols-outlined text-primary">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-text-body leading-relaxed">
+                        Relocation costs are highly variable depending on the destination (Domestic vs. International), airline fees, crate requirements, and veterinary certifications. Our base consultation fee covers the initial planning and quote generation.
+                    </div>
+</details>
+</div>
+</section>
+<footer class="w-full bg-dark-purple text-white py-16 px-10 border-t-8 border-primary">
+<div class="max-w-[960px] mx-auto flex flex-col md:flex-row justify-between gap-12">
+<div class="flex flex-col gap-6">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-4xl text-accent">pets</span>
+<span class="font-bold text-2xl text-white">Waggies Pet Services</span>
+</div>
+<p class="text-violet-200 text-sm max-w-xs leading-relaxed">
+                        Abuja's premier pet care facility. Boarding, Grooming, Training, and Relocation services delivered with love and professionalism.
+                    </p>
+</div>
+<div class="flex gap-12 md:gap-24">
+<div class="flex flex-col gap-4">
+<h4 class="font-bold text-lg text-white">Services</h4>
+<a class="text-violet-300 hover:text-white hover:translate-x-1 transition-all text-sm" href="#">Boarding</a>
+<a class="text-violet-300 hover:text-white hover:translate-x-1 transition-all text-sm" href="#">Grooming</a>
+<a class="text-violet-300 hover:text-white hover:translate-x-1 transition-all text-sm" href="#">Relocation</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-bold text-lg text-white">Company</h4>
+<a class="text-violet-300 hover:text-white hover:translate-x-1 transition-all text-sm" href="#">About Us</a>
+<a class="text-violet-300 hover:text-white hover:translate-x-1 transition-all text-sm" href="#">Contact</a>
+<a class="text-violet-300 hover:text-white hover:translate-x-1 transition-all text-sm" href="#">Careers</a>
+</div>
+</div>
+</div>
+<div class="max-w-[960px] mx-auto mt-16 pt-8 border-t border-white/10 text-center text-violet-400 text-sm">
+                © 2025 Waggies Pet Services. All rights reserved.
+            </div>
+</footer>
+</main>
+
+</body></html>
