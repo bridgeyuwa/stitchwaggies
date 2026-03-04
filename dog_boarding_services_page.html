@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Waggies Pet Services - Dog Boarding</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#8c2bee",
+                        "background-light": "#f7f6f8",
+                        "background-dark": "#191022",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "2xl": "2rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar for gallery if needed */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#141118] dark:text-white font-display overflow-x-hidden antialiased">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root">
+<!-- Navigation -->
+<header class="sticky top-0 z-50 w-full bg-white/90 dark:bg-[#191022]/90 backdrop-blur-md border-b border-solid border-[#f2f0f4] dark:border-gray-800">
+<div class="layout-container flex justify-center w-full">
+<div class="flex max-w-[1280px] flex-1 items-center justify-between px-4 py-3 md:px-10">
+<div class="flex items-center gap-4">
+<div class="text-primary size-8">
+<span class="material-symbols-outlined text-3xl">pets</span>
+</div>
+<h2 class="text-[#141118] dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]">Waggies Pet Services</h2>
+</div>
+<div class="hidden lg:flex items-center gap-8">
+<nav class="flex items-center gap-6">
+<a class="text-[#141118] dark:text-gray-200 text-sm font-medium hover:text-primary transition-colors" href="#">Boarding</a>
+<a class="text-[#141118] dark:text-gray-200 text-sm font-medium hover:text-primary transition-colors" href="#">Grooming</a>
+<a class="text-[#141118] dark:text-gray-200 text-sm font-medium hover:text-primary transition-colors" href="#">Vet Care</a>
+<a class="text-[#141118] dark:text-gray-200 text-sm font-medium hover:text-primary transition-colors" href="#">Training</a>
+<a class="text-[#141118] dark:text-gray-200 text-sm font-medium hover:text-primary transition-colors" href="#">Relocation</a>
+</nav>
+<button class="flex cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-6 bg-primary hover:bg-primary/90 transition-colors text-white text-sm font-bold shadow-lg shadow-primary/20">
+<span class="truncate">Get a Quote</span>
+</button>
+</div>
+<!-- Mobile Menu Icon -->
+<button class="lg:hidden text-[#141118] dark:text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-1 flex flex-col items-center w-full">
+<!-- Hero Section -->
+<div class="w-full max-w-[1280px] px-4 md:px-10 py-5">
+<div class="rounded-2xl overflow-hidden relative min-h-[560px] flex flex-col justify-end p-6 md:p-12 bg-cover bg-center bg-no-repeat group" data-alt="Happy dog jumping and playing in a grassy field with a blurred background" style='background-image: linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.6) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuALw6RYA_1d1MKb8K20CUv6-HVtIib1kPIhKPaTmddz15mzhgLKqKV1gz0iyyyjjF-2H2QBvX758RVCYuLGJ-GONJtPrm_QVcNNeBexmef7Sp3yAztTAoAUQR394Mz81Ayd4lURgi2Pz-9eIa2dmJteSbyD5eCMvGRkPmb5kw9tH9phVwhmt-YAnfB1AVs45C8AYq4S0623KOsoX-pQlZkfLFFA6l7SbDmwCRmtx3EEVq--OCS3YCgmJ5jtB9wMZR-6IzC21w1TChp5");'>
+<div class="relative z-10 max-w-2xl animate-fade-in-up">
+<h1 class="text-white text-4xl md:text-6xl font-black leading-tight tracking-[-0.033em] mb-4 drop-shadow-sm">
+                            Premium Dog Boarding in Abuja
+                        </h1>
+<h2 class="text-gray-100 text-lg md:text-xl font-medium leading-relaxed mb-8 max-w-xl text-shadow-sm">
+                            A home away from home. Luxury suites, daily playgroups, and 24/7 love for your furry best friend.
+                        </h2>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="flex items-center justify-center rounded-xl h-12 px-8 bg-primary hover:bg-primary/90 text-white text-base font-bold shadow-xl shadow-primary/30 transition-transform hover:scale-[1.02]">
+                                Book a Stay
+                            </button>
+<button class="flex items-center justify-center rounded-xl h-12 px-8 bg-white/20 hover:bg-white/30 backdrop-blur-md text-white text-base font-bold border border-white/30 transition-colors">
+                                View Gallery
+                            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Features / Trust Indicators -->
+<div class="w-full bg-white dark:bg-[#191022] py-16">
+<div class="max-w-[1280px] px-4 md:px-10 mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="flex flex-col gap-3">
+<div class="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-2">
+<span class="material-symbols-outlined text-2xl">videocam</span>
+</div>
+<h3 class="text-lg font-bold text-[#141118] dark:text-white">Live Webcam Access</h3>
+<p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">Check in on your pup anytime, anywhere from your smartphone.</p>
+</div>
+<div class="flex flex-col gap-3">
+<div class="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-2">
+<span class="material-symbols-outlined text-2xl">medical_services</span>
+</div>
+<h3 class="text-lg font-bold text-[#141118] dark:text-white">24/7 Vet on Call</h3>
+<p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">Professional veterinary care available round the clock for peace of mind.</p>
+</div>
+<div class="flex flex-col gap-3">
+<div class="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-2">
+<span class="material-symbols-outlined text-2xl">security</span>
+</div>
+<h3 class="text-lg font-bold text-[#141118] dark:text-white">Secure Facility</h3>
+<p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">24/7 security personnel and full backup power generation.</p>
+</div>
+<div class="flex flex-col gap-3">
+<div class="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-2">
+<span class="material-symbols-outlined text-2xl">ac_unit</span>
+</div>
+<h3 class="text-lg font-bold text-[#141118] dark:text-white">Climate Controlled</h3>
+<p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">Fully air-conditioned suites to keep your pet cool in Abuja heat.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Pricing / Accommodation Options -->
+<div class="w-full py-16 bg-primary/5 dark:bg-[#1e1427]">
+<div class="max-w-[1280px] px-4 md:px-10 mx-auto flex flex-col gap-10">
+<div class="text-center max-w-2xl mx-auto">
+<h2 class="text-3xl font-bold text-[#141118] dark:text-white mb-4">Choose Their Perfect Stay</h2>
+<p class="text-gray-500 dark:text-gray-400">Whether they need a cozy nook or a sprawling suite, we have the perfect spot for your furry family member.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10">
+<!-- Standard Card -->
+<div class="flex flex-col rounded-2xl border border-[#e0dbe6] dark:border-gray-700 bg-white dark:bg-[#251a30] p-8 hover:shadow-xl hover:shadow-primary/5 transition-all">
+<div class="flex justify-between items-start mb-6">
+<div>
+<h3 class="text-xl font-bold text-[#141118] dark:text-white">Standard Kennel</h3>
+<p class="text-sm text-gray-500 mt-1">Perfect for social butterflies</p>
+</div>
+<span class="bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Most Popular</span>
+</div>
+<div class="mb-8">
+<span class="text-4xl font-black text-[#141118] dark:text-white tracking-tight">₦15,000</span>
+<span class="text-gray-500 font-medium">/ night</span>
+</div>
+<button class="w-full rounded-xl h-12 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-[#141118] dark:text-white font-bold mb-8 transition-colors">
+                                Book Standard
+                            </button>
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3 text-sm text-gray-700 dark:text-gray-300">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+                                    Cozy bedding
+                                </div>
+<div class="flex items-center gap-3 text-sm text-gray-700 dark:text-gray-300">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+                                    3x Daily walks
+                                </div>
+<div class="flex items-center gap-3 text-sm text-gray-700 dark:text-gray-300">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+                                    Premium kibble included
+                                </div>
+<div class="flex items-center gap-3 text-sm text-gray-700 dark:text-gray-300">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+                                    Social play groups
+                                </div>
+</div>
+</div>
+<!-- Luxury Card -->
+<div class="flex flex-col rounded-2xl border-2 border-primary bg-white dark:bg-[#251a30] p-8 relative shadow-2xl shadow-primary/10">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider shadow-lg">
+                                Luxury Choice
+                            </div>
+<div class="flex justify-between items-start mb-6 mt-2">
+<div>
+<h3 class="text-xl font-bold text-[#141118] dark:text-white">Executive Suite</h3>
+<p class="text-sm text-gray-500 mt-1">The ultimate vacation experience</p>
+</div>
+</div>
+<div class="mb-8">
+<span class="text-4xl font-black text-[#141118] dark:text-white tracking-tight">₦30,000</span>
+<span class="text-gray-500 font-medium">/ night</span>
+</div>
+<button class="w-full rounded-xl h-12 bg-primary hover:bg-primary/90 text-white font-bold mb-8 shadow-lg shadow-primary/25 transition-all">
+                                Book Executive
+                            </button>
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3 text-sm text-gray-700 dark:text-gray-300">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="font-bold">Live Webcam Access</span>
+</div>
+<div class="flex items-center gap-3 text-sm text-gray-700 dark:text-gray-300">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+                                    Plush orthopedic bed
+                                </div>
+<div class="flex items-center gap-3 text-sm text-gray-700 dark:text-gray-300">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+                                    Private TV with DogTV
+                                </div>
+<div class="flex items-center gap-3 text-sm text-gray-700 dark:text-gray-300">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+                                    Exit Grooming session included
+                                </div>
+<div class="flex items-center gap-3 text-sm text-gray-700 dark:text-gray-300">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+                                    1-on-1 Personalized playtime
+                                </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- A Day in the Life -->
+<div class="w-full py-16 bg-white dark:bg-[#191022]">
+<div class="max-w-[1280px] px-4 md:px-10 mx-auto">
+<div class="flex flex-col lg:flex-row gap-12 items-center">
+<div class="flex-1 space-y-8">
+<div>
+<h2 class="text-3xl font-bold text-[#141118] dark:text-white mb-4">A Day in the Life at Waggies</h2>
+<p class="text-gray-500 dark:text-gray-400 text-lg">We keep tails wagging from sunrise to sunset with a structured routine of fun, food, and rest.</p>
+</div>
+<div class="space-y-6 relative pl-8 before:absolute before:left-[11px] before:top-2 before:bottom-2 before:w-[2px] before:bg-gray-200 dark:before:bg-gray-800">
+<div class="relative">
+<div class="absolute -left-[41px] bg-primary rounded-full p-1 border-4 border-white dark:border-[#191022]">
+<span class="material-symbols-outlined text-white text-sm block">wb_sunny</span>
+</div>
+<h4 class="font-bold text-[#141118] dark:text-white">7:00 AM — Rise &amp; Shine</h4>
+<p class="text-sm text-gray-500">First potty walk of the day and fresh water service.</p>
+</div>
+<div class="relative">
+<div class="absolute -left-[41px] bg-primary/60 rounded-full p-1 border-4 border-white dark:border-[#191022]">
+<span class="material-symbols-outlined text-white text-sm block">restaurant</span>
+</div>
+<h4 class="font-bold text-[#141118] dark:text-white">8:00 AM — Breakfast</h4>
+<p class="text-sm text-gray-500">Premium kibble or owner-provided meals served individually.</p>
+</div>
+<div class="relative">
+<div class="absolute -left-[41px] bg-primary/60 rounded-full p-1 border-4 border-white dark:border-[#191022]">
+<span class="material-symbols-outlined text-white text-sm block">sports_baseball</span>
+</div>
+<h4 class="font-bold text-[#141118] dark:text-white">9:30 AM — Group Play</h4>
+<p class="text-sm text-gray-500">Supervised socialization in our secure outdoor paddocks.</p>
+</div>
+<div class="relative">
+<div class="absolute -left-[41px] bg-primary/60 rounded-full p-1 border-4 border-white dark:border-[#191022]">
+<span class="material-symbols-outlined text-white text-sm block">bedtime</span>
+</div>
+<h4 class="font-bold text-[#141118] dark:text-white">12:00 PM — Siesta</h4>
+<p class="text-sm text-gray-500">A well-deserved nap in climate-controlled suites.</p>
+</div>
+<div class="relative">
+<div class="absolute -left-[41px] bg-primary rounded-full p-1 border-4 border-white dark:border-[#191022]">
+<span class="material-symbols-outlined text-white text-sm block">nights_stay</span>
+</div>
+<h4 class="font-bold text-[#141118] dark:text-white">8:00 PM — Tuck In</h4>
+<p class="text-sm text-gray-500">Final potty break, bedtime treats, and soothing music.</p>
+</div>
+</div>
+</div>
+<div class="flex-1 w-full">
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-4 pt-8">
+<img class="rounded-2xl w-full h-48 object-cover shadow-lg" data-alt="Two happy golden retrievers smiling at the camera" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeK78vLUE_PayPOCVZ0JbkSYNR6RV4XrKjVHMkJPwQ1IkPM7iHuBlOJ_fEMQRtwNICp2_FoXjQ5en0ZTO4Vrrg2-MY2tMDL6OuwIImsu8Gc56h3DXEP0r5pGPSSiRMn4Ej6-PC77XGGAn-mKwvXBa5-u07a3gcFEhO_2dtW_KOYaL3U-Jpssz32KsHHlsshuedOBOJSezo09q70pHkTrOK8OCT27rNFV7q5SV_j8j_71XC8IFhhUypCgMeHGnQ56Z3YX_zJsErSPIG"/>
+<img class="rounded-2xl w-full h-64 object-cover shadow-lg" data-alt="French bulldog puppy looking curious on white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJO37X5EyPHE-CMK_iJWoD1lc5cgFcCYXDOnAxh_95hNyuViUj5RpSOftQ9jBWRzP9DsWtJfZG4OrMXaNDYwNeY9IGiK1C0e2_jRzjKBiOW-o8diaYdDBq_fdIJj91iYjYLySRX8NFU6AwwS_X7zZOlAzGHEaKG-6G2osX9ywuL-6qG0gbhVx9TtSiN7i6xu7o7T0dkxDTtIpgZNDwlc1TMXA4HDuzoRppoogysyQXBTttZlMc5u6fGBzx89w_b03ziBcUvUcgLwpE"/>
+</div>
+<div class="space-y-4">
+<img class="rounded-2xl w-full h-64 object-cover shadow-lg" data-alt="Border collie running through green grass" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNC6259YdTvOwA446qdIgRaL5LyCRNQbxjBvw-27EjM4htkb9vZ5H3G7WaTTwVX6n1VXaikqlwnIBji4ntGrn6gJdPGX3auoR0VLoixwq9XwsnTjyB-yYoduHYZt8soaVZEdgN8_0h14pONUOchanu-0fxv7sQ6WySLTzg6a3XdMvMS53tMF97EiQMWyX7Dfohd8QFNG6X4UNqK1iyWxFk2l7fLki9LcUaP-8Na8429Q67fqkj1Bqwx_t0YKpAL7jVXngdClYKzLM_"/>
+<img class="rounded-2xl w-full h-48 object-cover shadow-lg" data-alt="Dog sleeping comfortably in a bed" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtManlPRPP1XKIOl18UylpCp--r0blWRX9BQHiKvNHehLcK3v4a-fwjuTlH9z96Y4XBZUNKnbQJWVjPaWnSe-8GvGr7kmcUkZLzgWDTgygrc41jvYhVpcEQJrna49h6wlx1If2b_NVXsgTw9-P1FOjOWLVX6au7iWOlzD3zp4PJuaoXi3sX0Rxh18Ut93Tkf0WjeZYrN-CtZRu4Q1-IvXi593yrrqNV2osL6iuG1gFBdj3hGHsWeI3GwL7klB7tZP_b10-eLqSaID4"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Safety & Requirements -->
+<div class="w-full py-16 bg-background-light dark:bg-[#1f152a] border-y border-gray-100 dark:border-gray-800">
+<div class="max-w-[1280px] px-4 md:px-10 mx-auto">
+<div class="bg-white dark:bg-[#251a30] rounded-2xl p-8 md:p-12 shadow-sm border border-gray-100 dark:border-gray-700">
+<div class="flex flex-col md:flex-row gap-8 items-start">
+<div class="flex-1">
+<h3 class="text-2xl font-bold text-[#141118] dark:text-white mb-4 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">health_and_safety</span>
+                                    Safety First Policy
+                                </h3>
+<p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                                    To ensure the health and happiness of all our guests, we maintain strict safety protocols.
+                                    All guests must be up-to-date on vaccinations (DHPP, Rabies, Kennel Cough) and be on an active flea/tick prevention program.
+                                </p>
+<a class="text-primary font-bold hover:underline inline-flex items-center gap-1" href="#">
+                                    View full boarding requirements
+                                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="h-px w-full md:w-px md:h-32 bg-gray-200 dark:bg-gray-700"></div>
+<div class="flex-1">
+<h3 class="text-xl font-bold text-[#141118] dark:text-white mb-4">Location</h3>
+<div class="rounded-xl overflow-hidden h-40 bg-gray-200 dark:bg-gray-700 relative group cursor-pointer">
+<img class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" data-alt="Map view of Abuja city showing streets and landmarks" data-location="Abuja" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-iwT_TVqxwSQ9REX100Qi1R8qp5rvAwXAeni2V-aGkcyTj4snUsFmsrzvEJWlNDw4Msu-OVQ0JbL11wXY2tCacwyZSvZqFwsUUAE5M-fgGQ1Z42JubR6KJqaYSrBpdTfxbOLIs88J8lKA2_oAkOzWxjREIACbrbYWVQwDRdItcgfHX5WSXHJVtcrTW-j78aKo0tiGjiRK_Pm60QmjiU3EhIHTKJf7XaZ9ufGjad0J9bgnC1IztRTMVRpUU4Dzhbyjc_KWhMUb4vqy"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<button class="bg-white/90 text-primary px-4 py-2 rounded-lg font-bold shadow-md text-sm">Open in Maps</button>
+</div>
+</div>
+<p class="text-gray-500 dark:text-gray-400 mt-3 text-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-base">pin_drop</span>
+                                    Wuse 2, Abuja, Nigeria
+                                </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Final CTA -->
+<div class="w-full py-20 bg-primary text-white text-center">
+<div class="max-w-[720px] px-4 mx-auto flex flex-col items-center gap-6">
+<h2 class="text-3xl md:text-5xl font-black tracking-tight">Ready to Wagg?</h2>
+<p class="text-lg text-white/90 max-w-lg">Spaces fill up quickly, especially during holidays. Secure your pup's spot today and travel with peace of mind.</p>
+<div class="flex flex-col sm:flex-row gap-4 mt-2 w-full sm:w-auto">
+<button class="bg-white text-primary hover:bg-gray-50 h-14 px-8 rounded-xl font-bold text-lg shadow-lg transition-colors w-full sm:w-auto">
+                            Get a Quote
+                        </button>
+<button class="bg-primary border border-white/30 hover:bg-primary/80 h-14 px-8 rounded-xl font-bold text-lg transition-colors w-full sm:w-auto">
+                            Contact Us
+                        </button>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="w-full bg-[#141118] text-white py-12 border-t border-gray-800">
+<div class="max-w-[1280px] px-4 md:px-10 mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-2">
+<div class="text-primary size-6">
+<span class="material-symbols-outlined text-2xl">pets</span>
+</div>
+<span class="font-bold text-xl tracking-tight">Waggies Pet Services</span>
+</div>
+<div class="flex gap-6 flex-wrap justify-center">
+<a class="text-gray-400 hover:text-white text-sm" href="#">Privacy Policy</a>
+<a class="text-gray-400 hover:text-white text-sm" href="#">Terms of Service</a>
+<a class="text-gray-400 hover:text-white text-sm" href="#">Instagram</a>
+<a class="text-gray-400 hover:text-white text-sm" href="#">Facebook</a>
+</div>
+<p class="text-gray-500 text-sm">© 2025 Waggies Pet Services. Abuja, NG.</p>
+</div>
+</div>
+</footer>
+</main>
+</div>
+</body></html>

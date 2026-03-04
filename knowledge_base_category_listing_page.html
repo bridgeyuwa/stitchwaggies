@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Waggies Knowledge Base</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#7f13ec",
+                        "background-light": "#f7f6f8",
+                        "background-dark": "#191022", // Kept for config compatibility, but avoiding in usage
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom scrollbar for horizontal chips if needed */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background-light text-[#141118] antialiased">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 bg-white border-b border-[#f2f0f4]">
+<div class="px-4 md:px-10 py-3 max-w-[1440px] mx-auto flex items-center justify-between">
+<div class="flex items-center gap-4 text-[#141118]">
+<div class="size-8 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl">pets</span>
+</div>
+<h2 class="text-[#141118] text-xl font-bold leading-tight tracking-[-0.015em]">Waggies Pet Services</h2>
+</div>
+<!-- Desktop Nav -->
+<div class="hidden md:flex flex-1 justify-end gap-8 items-center">
+<nav class="flex items-center gap-9">
+<a class="text-[#141118] hover:text-primary text-sm font-medium transition-colors" href="#">Services</a>
+<a class="text-primary text-sm font-medium transition-colors" href="#">Knowledge Base</a>
+<a class="text-[#141118] hover:text-primary text-sm font-medium transition-colors" href="#">Get a Quote</a>
+<a class="text-[#141118] hover:text-primary text-sm font-medium transition-colors" href="#">Contact Us</a>
+</nav>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-primary text-white text-sm font-bold shadow-md hover:bg-primary/90 transition-colors">
+<span class="truncate">Book Now</span>
+</button>
+</div>
+<!-- Mobile Menu Icon -->
+<div class="md:hidden text-[#141118]">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</div>
+</div>
+</header>
+<main class="flex flex-col min-h-screen">
+<!-- Hero Section -->
+<div class="relative w-full bg-white">
+<div class="w-full flex flex-col items-center justify-center min-h-[400px] bg-cover bg-center bg-no-repeat relative" data-alt="Happy dog running in a sunny park with soft purple tint overlay" style='background-image: linear-gradient(rgba(127, 19, 236, 0.4), rgba(127, 19, 236, 0.6)), url("https://lh3.googleusercontent.com/aida-public/AB6AXuAFENnuM9hwB6OmqKZHo2rIFfDhkXcRwfRBut0BupZt4WMaZ43nrVhyK1mDw2GaBDHEet9baSj3TjkU-l2aPqPLjbjsG6qZcQGK1jnjRPEXfkFeVpYhfN1mP4vU5mrirXMqEkclSqI4MmJdfH_Q89iXeJK0ZkBMvM50OGPcuI1N4rrFL1ch6oyT7JoPOJp0G2lQgqBLqr2e1-iH6rNbNjsuEDK95QXp8cB3VlgvnEeA-_bvJksNjMIRpyDOwLxiJ2f7Jt3gizCxHw_y");'>
+<div class="relative z-10 flex flex-col items-center gap-6 px-4 max-w-4xl text-center">
+<h1 class="text-white text-4xl md:text-5xl font-black leading-tight tracking-tight drop-shadow-sm">
+                        Waggies Knowledge Base
+                    </h1>
+<h2 class="text-white/90 text-lg md:text-xl font-medium max-w-2xl leading-relaxed drop-shadow-sm">
+                        Expert advice for your furry friends in Abuja. Find answers about health, grooming, and relocation.
+                    </h2>
+<!-- Search Bar -->
+<label class="flex flex-col w-full max-w-[560px] h-14 md:h-16 shadow-lg mt-4">
+<div class="flex w-full flex-1 items-stretch rounded-xl h-full bg-white overflow-hidden ring-1 ring-black/5 focus-within:ring-2 focus-within:ring-primary transition-shadow">
+<div class="text-[#756189] flex items-center justify-center pl-4 md:pl-6">
+<span class="material-symbols-outlined text-[24px]">search</span>
+</div>
+<input class="flex w-full min-w-0 flex-1 resize-none bg-transparent text-[#141118] focus:outline-none h-full placeholder:text-[#756189] px-4 text-base font-normal leading-normal" placeholder="Search for topics (e.g., Dog Health, Travel)..." value=""/>
+<div class="flex items-center justify-center pr-2">
+<button class="flex cursor-pointer items-center justify-center rounded-lg h-10 px-5 md:h-12 md:px-6 bg-primary text-white text-sm md:text-base font-bold transition-transform active:scale-95">
+<span>Search</span>
+</button>
+</div>
+</div>
+</label>
+</div>
+</div>
+</div>
+<div class="layout-container flex flex-col items-center w-full max-w-[1200px] mx-auto px-4 md:px-10 pb-20">
+<!-- Breadcrumbs -->
+<div class="w-full flex flex-wrap gap-2 py-6 border-b border-[#f2f0f4]">
+<a class="text-[#756189] hover:text-primary text-sm font-medium transition-colors" href="#">Home</a>
+<span class="text-[#756189] text-sm font-medium">/</span>
+<span class="text-[#141118] text-sm font-medium">Knowledge Base</span>
+</div>
+<div class="w-full flex flex-col md:flex-row gap-10 mt-8">
+<!-- Sidebar / Categories -->
+<aside class="w-full md:w-64 shrink-0 space-y-8">
+<div class="sticky top-24">
+<h3 class="text-[#141118] text-lg font-bold mb-4">Categories</h3>
+<div class="flex flex-row md:flex-col gap-2 overflow-x-auto md:overflow-visible pb-4 md:pb-0 no-scrollbar">
+<button class="flex items-center justify-between w-full p-3 rounded-lg bg-primary text-white text-sm font-semibold shadow-sm text-left group">
+<span>All Topics</span>
+<span class="material-symbols-outlined text-lg">chevron_right</span>
+</button>
+<button class="flex items-center justify-between w-full p-3 rounded-lg hover:bg-white bg-[#f7f6f8] text-[#5c5c5c] hover:text-primary border border-transparent hover:border-primary/20 text-sm font-medium transition-all text-left group">
+<span>Dog Health</span>
+<span class="material-symbols-outlined text-lg opacity-0 group-hover:opacity-100 transition-opacity">chevron_right</span>
+</button>
+<button class="flex items-center justify-between w-full p-3 rounded-lg hover:bg-white bg-[#f7f6f8] text-[#5c5c5c] hover:text-primary border border-transparent hover:border-primary/20 text-sm font-medium transition-all text-left group">
+<span>Cat Behavior</span>
+<span class="material-symbols-outlined text-lg opacity-0 group-hover:opacity-100 transition-opacity">chevron_right</span>
+</button>
+<button class="flex items-center justify-between w-full p-3 rounded-lg hover:bg-white bg-[#f7f6f8] text-[#5c5c5c] hover:text-primary border border-transparent hover:border-primary/20 text-sm font-medium transition-all text-left group">
+<span>Pet Relocation</span>
+<span class="material-symbols-outlined text-lg opacity-0 group-hover:opacity-100 transition-opacity">chevron_right</span>
+</button>
+<button class="flex items-center justify-between w-full p-3 rounded-lg hover:bg-white bg-[#f7f6f8] text-[#5c5c5c] hover:text-primary border border-transparent hover:border-primary/20 text-sm font-medium transition-all text-left group">
+<span>Grooming Tips</span>
+<span class="material-symbols-outlined text-lg opacity-0 group-hover:opacity-100 transition-opacity">chevron_right</span>
+</button>
+<button class="flex items-center justify-between w-full p-3 rounded-lg hover:bg-white bg-[#f7f6f8] text-[#5c5c5c] hover:text-primary border border-transparent hover:border-primary/20 text-sm font-medium transition-all text-left group">
+<span>Vet Care Essentials</span>
+<span class="material-symbols-outlined text-lg opacity-0 group-hover:opacity-100 transition-opacity">chevron_right</span>
+</button>
+</div>
+<!-- Mini CTA in Sidebar -->
+<div class="hidden md:flex flex-col gap-4 p-5 mt-8 rounded-xl bg-primary/5 border border-primary/10">
+<div class="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">support_agent</span>
+</div>
+<div>
+<h4 class="font-bold text-[#141118]">Need Personal Advice?</h4>
+<p class="text-xs text-[#5c5c5c] mt-1 leading-relaxed">Our vets in Abuja are ready to help with specific concerns.</p>
+</div>
+<button class="w-full py-2.5 rounded-lg border border-primary text-primary hover:bg-primary hover:text-white text-xs font-bold transition-all">
+                                Contact Us
+                            </button>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between mb-6">
+<h2 class="text-[#141118] text-2xl font-bold tracking-tight">Latest Articles</h2>
+<span class="text-sm text-[#756189] font-medium hidden sm:block">Showing 1-6 of 24 articles</span>
+</div>
+<!-- Article Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Article Card 1 -->
+<article class="group flex flex-col bg-white rounded-xl border border-[#e0dbe6] overflow-hidden hover:shadow-lg hover:border-primary/30 transition-all duration-300">
+<div class="h-48 overflow-hidden relative bg-gray-100">
+<img alt="Labrador dog looking out car window" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Happy dog looking out of a car window during travel" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6qBg3X9MSOr5phRdOuPx37eK0g6t9rwrP63o9GAufD8JpmoxxGCR2KEiFktgcEyMGfNw-lsK404_Q62G9eVQKt44Fxo6MIY5z35y2hC9Cpb-rfT6DbZffnsd9sl6mcEuQkchW9wtEedmJLFh010z4s592oZKxnBH2w6UrEZszQhXwwQl9E7r6gwKJgWgKuwSQf_psXRwP9LTPHP3SgyOyyiXHKa1pG_8XUkJ4Q7LRMSSo8IntM6XRlmSRs6SUbTTpDSWBhPxeRW-j"/>
+<div class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-2.5 py-1 rounded-md text-xs font-bold text-primary shadow-sm">
+                                    Pet Relocation
+                                </div>
+</div>
+<div class="flex flex-col flex-1 p-5">
+<h3 class="text-lg font-bold text-[#141118] leading-tight mb-2 group-hover:text-primary transition-colors">
+                                    How to Prepare Your Dog for International Travel from Nigeria
+                                </h3>
+<p class="text-sm text-[#5c5c5c] line-clamp-3 mb-4 leading-relaxed">
+                                    Relocating with pets requires careful planning. Learn about the documentation, vaccinations, and crate training needed for a smooth journey.
+                                </p>
+<div class="mt-auto pt-4 border-t border-[#f2f0f4] flex items-center text-sm font-bold text-primary">
+                                    Read Article
+                                    <span class="material-symbols-outlined text-lg ml-1 transition-transform group-hover:translate-x-1">arrow_forward</span>
+</div>
+</div>
+</article>
+<!-- Article Card 2 -->
+<article class="group flex flex-col bg-white rounded-xl border border-[#e0dbe6] overflow-hidden hover:shadow-lg hover:border-primary/30 transition-all duration-300">
+<div class="h-48 overflow-hidden relative bg-gray-100">
+<img alt="Close up of a cat's face" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Close up portrait of a cat looking attentive" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCM2YoYScgx8YViLGoufqu6Osr2UJEvSG6ItOZQdWTaRoWCOgQ7Ie9aO_Is4HCFRoFewqifN0hc9wcAyW0TYhxzqlf2ADX_UWh4bEFthem-1HMbJV_UDFJl1NOv7vmuA7x5urhqaEn3lgrG1bDAsZ1PRSwpTE6X3wnQPW1Vl5X1_bBIfcdP5IOBBD0gTnhwHUKn4rbXyK8B4oiYDHIJOPWKqy1ozvugEJwGMEYLKL5IbDX21wV1PbWK_4Vt-PaOZs6lwYp88pVq4JWc"/>
+<div class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-2.5 py-1 rounded-md text-xs font-bold text-primary shadow-sm">
+                                    Cat Behavior
+                                </div>
+</div>
+<div class="flex flex-col flex-1 p-5">
+<h3 class="text-lg font-bold text-[#141118] leading-tight mb-2 group-hover:text-primary transition-colors">
+                                    5 Signs Your Cat Needs Immediate Vet Attention
+                                </h3>
+<p class="text-sm text-[#5c5c5c] line-clamp-3 mb-4 leading-relaxed">
+                                    Cats are masters at hiding pain. Discover the subtle behavioral changes that indicate your feline friend might be suffering in silence.
+                                </p>
+<div class="mt-auto pt-4 border-t border-[#f2f0f4] flex items-center text-sm font-bold text-primary">
+                                    Read Article
+                                    <span class="material-symbols-outlined text-lg ml-1 transition-transform group-hover:translate-x-1">arrow_forward</span>
+</div>
+</div>
+</article>
+<!-- Article Card 3 -->
+<article class="group flex flex-col bg-white rounded-xl border border-[#e0dbe6] overflow-hidden hover:shadow-lg hover:border-primary/30 transition-all duration-300">
+<div class="h-48 overflow-hidden relative bg-gray-100">
+<img alt="Dog being groomed" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Professional grooming session with a fluffy dog" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOAJq-wRtnYBRF3vI3UfjE8VcTA8FRH4Iw7PJCHYcDxdYmDK1WdHrgGv2776BEb6bkm3IL0QhlyiNiyYv06Q49D-f3c7HKRRrDjwx2nQxQTXYpig-mYcg15uwgCvEVlelo7SK74JKgfH_7Vh-fFQmzEa50wrRuEnDpgsecvJElfhcxCzk-FLLug38YTWBwN2ih2MHTehwd7DCOlZdJ9P9a7j-64njFglCrZL27j5aRvdWsrXmGXUq70ituYQg0sxluYmyOkQwxXKxg"/>
+<div class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-2.5 py-1 rounded-md text-xs font-bold text-primary shadow-sm">
+                                    Grooming Tips
+                                </div>
+</div>
+<div class="flex flex-col flex-1 p-5">
+<h3 class="text-lg font-bold text-[#141118] leading-tight mb-2 group-hover:text-primary transition-colors">
+                                    The Benefits of Professional Grooming for Long-Haired Breeds
+                                </h3>
+<p class="text-sm text-[#5c5c5c] line-clamp-3 mb-4 leading-relaxed">
+                                    Regular grooming isn't just about looks. It prevents matting, skin infections, and overheating for long-haired dogs in Abuja's climate.
+                                </p>
+<div class="mt-auto pt-4 border-t border-[#f2f0f4] flex items-center text-sm font-bold text-primary">
+                                    Read Article
+                                    <span class="material-symbols-outlined text-lg ml-1 transition-transform group-hover:translate-x-1">arrow_forward</span>
+</div>
+</div>
+</article>
+<!-- Article Card 4 -->
+<article class="group flex flex-col bg-white rounded-xl border border-[#e0dbe6] overflow-hidden hover:shadow-lg hover:border-primary/30 transition-all duration-300">
+<div class="h-48 overflow-hidden relative bg-gray-100">
+<img alt="Veterinarian examining a dog" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Veterinarian performing a checkup on a golden retriever" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfk8cH76w3TzVeiK2M-5yV3_EVOWSQGuTGWXtK0ilDyuBnLFvSEefmhX2JbHQuo10r6RL8tSe-CVkgxOK6hzfTEjPvghdbH2UwQc24NwNkkT81kUiPjVdM9zmd67MSP8d4lIeDDixlPdg9juPXVVDvhQCttBvt_g9ONc-4dJWG5it4vKtOsFvA_-sM4J7-UcQ0Uwywh8fpdn3tlwBylJQ2HPjBpsDbrt0Sg_SX5mJaHmPur6ZfOrC2pUVNiOuB5nq2ECwCgaGcmysh"/>
+<div class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-2.5 py-1 rounded-md text-xs font-bold text-primary shadow-sm">
+                                    Vet Care Essentials
+                                </div>
+</div>
+<div class="flex flex-col flex-1 p-5">
+<h3 class="text-lg font-bold text-[#141118] leading-tight mb-2 group-hover:text-primary transition-colors">
+                                    Essential Vaccinations for Puppies: A Complete Schedule
+                                </h3>
+<p class="text-sm text-[#5c5c5c] line-clamp-3 mb-4 leading-relaxed">
+                                    Protect your new puppy from common deadly diseases. Here is the recommended vaccination timeline for puppies in Nigeria.
+                                </p>
+<div class="mt-auto pt-4 border-t border-[#f2f0f4] flex items-center text-sm font-bold text-primary">
+                                    Read Article
+                                    <span class="material-symbols-outlined text-lg ml-1 transition-transform group-hover:translate-x-1">arrow_forward</span>
+</div>
+</div>
+</article>
+<!-- Article Card 5 -->
+<article class="group flex flex-col bg-white rounded-xl border border-[#e0dbe6] overflow-hidden hover:shadow-lg hover:border-primary/30 transition-all duration-300">
+<div class="h-48 overflow-hidden relative bg-gray-100">
+<img alt="Dog eating from a bowl" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A dog eating healthy food from a ceramic bowl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCD4OWJ8UL_CkItgo0Mgov4Dil8vEcqRVexx7AxYaf6zsvx3ig6RyTGjPiIQ5CZQleNHGj_C85tus_cBcU0IQlMORgVCO_g6g2gjl-Qju__XjR3QPkngKeik_Uz6h222viBhMAfJAvlfL2NTx7RgFj6td2vUUh3aHh3ae4GhdmLZURAXR1UXqO4ubby4opNWBhDusZNE9x-E7yj_av3zC3XC9mU_nxwE6_z6q5twp5XZBpN99xl7mAcMryN1EwmmD95E8p_QXdzdsc_"/>
+<div class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-2.5 py-1 rounded-md text-xs font-bold text-primary shadow-sm">
+                                    Dog Health
+                                </div>
+</div>
+<div class="flex flex-col flex-1 p-5">
+<h3 class="text-lg font-bold text-[#141118] leading-tight mb-2 group-hover:text-primary transition-colors">
+                                    Choosing the Right Diet for Your Senior Dog
+                                </h3>
+<p class="text-sm text-[#5c5c5c] line-clamp-3 mb-4 leading-relaxed">
+                                    As dogs age, their nutritional needs change. Find out what ingredients to look for to support joint health and energy levels.
+                                </p>
+<div class="mt-auto pt-4 border-t border-[#f2f0f4] flex items-center text-sm font-bold text-primary">
+                                    Read Article
+                                    <span class="material-symbols-outlined text-lg ml-1 transition-transform group-hover:translate-x-1">arrow_forward</span>
+</div>
+</div>
+</article>
+<!-- Article Card 6 -->
+<article class="group flex flex-col bg-white rounded-xl border border-[#e0dbe6] overflow-hidden hover:shadow-lg hover:border-primary/30 transition-all duration-300">
+<div class="h-48 overflow-hidden relative bg-gray-100">
+<img alt="Person training a dog" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Trainer giving a treat to a sitting dog in a park" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6gnvmKO77kSoJOpFHh-EGC_fo_0Fh8SkxE_sDaA4VG3FuISCGcKuePTvA-EssTWMzXV0oS81mtPBz-l3AP1O1QeEfy5M--AfEeGWiJaQRRBOAuqsjJ_Oc5HtqG6xHxsd-w-Qgdbp-hERkWg3vib6FESJMBUstovYschho3AghRTEHLYn1cQ8AQOrWUMq_UNB04R8ecm9fwveBqR5d0gXsKzmseLZTzhtGppAB3Gs9BTtHUVI_NljwCgKUivPgW15EaLl7QQPi61ie"/>
+<div class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-2.5 py-1 rounded-md text-xs font-bold text-primary shadow-sm">
+                                    Training
+                                </div>
+</div>
+<div class="flex flex-col flex-1 p-5">
+<h3 class="text-lg font-bold text-[#141118] leading-tight mb-2 group-hover:text-primary transition-colors">
+                                    Basic Commands Every Dog Owner Should Master
+                                </h3>
+<p class="text-sm text-[#5c5c5c] line-clamp-3 mb-4 leading-relaxed">
+                                    Sit, stay, and come are more than just tricks; they are safety essentials. Our simple guide to getting started with obedience training.
+                                </p>
+<div class="mt-auto pt-4 border-t border-[#f2f0f4] flex items-center text-sm font-bold text-primary">
+                                    Read Article
+                                    <span class="material-symbols-outlined text-lg ml-1 transition-transform group-hover:translate-x-1">arrow_forward</span>
+</div>
+</div>
+</article>
+</div>
+<!-- Pagination / Load More -->
+<div class="flex justify-center mt-12">
+<button class="px-6 py-3 rounded-lg bg-white border border-[#e0dbe6] text-[#141118] font-semibold text-sm hover:border-primary hover:text-primary transition-colors shadow-sm">
+                            Load More Articles
+                        </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom CTA -->
+<section class="bg-primary py-12 px-4 md:px-10">
+<div class="max-w-[1200px] mx-auto flex flex-col md:flex-row items-center justify-between gap-8 rounded-2xl bg-white/10 p-8 md:p-12 border border-white/20 backdrop-blur-sm">
+<div class="text-center md:text-left">
+<h2 class="text-2xl md:text-3xl font-bold text-white mb-3">Expert care is just a click away</h2>
+<p class="text-white/90 text-sm md:text-base max-w-xl">
+                        Can't find what you're looking for? Our team of specialists is ready to help you with pet boarding, grooming, and vet services.
+                    </p>
+</div>
+<div class="shrink-0">
+<button class="flex items-center justify-center h-12 px-8 rounded-lg bg-white text-primary text-base font-bold shadow-lg hover:bg-gray-50 transition-colors">
+                        Get a Quote
+                    </button>
+</div>
+</div>
+</section>
+<!-- Footer Simple -->
+<footer class="bg-white border-t border-[#f2f0f4] py-8 px-4 md:px-10">
+<div class="max-w-[1440px] mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+<p class="text-sm text-[#756189]">© 2025 Waggies Pet Services. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="text-sm text-[#141118] font-medium hover:text-primary" href="#">Privacy Policy</a>
+<a class="text-sm text-[#141118] font-medium hover:text-primary" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+</main>
+</body></html>

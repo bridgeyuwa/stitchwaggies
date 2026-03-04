@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Waggies - Order History &amp; Tracking</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#7f13ec",
+                        "primary-light": "#f2e6ff",
+                        "background-light": "#f9f8fa", 
+                        "background-dark": "#191022", // Unused based on prompt requirements but kept for config validity
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "sans": ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light font-display text-slate-800 antialiased selection:bg-primary selection:text-white">
+<!-- Main Wrapper -->
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Header -->
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 bg-white px-6 py-3 lg:px-10 shadow-sm">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3 text-slate-900">
+<div class="flex size-10 items-center justify-center rounded-xl bg-primary text-white">
+<span class="material-symbols-outlined text-2xl">pets</span>
+</div>
+<h2 class="text-slate-900 text-xl font-bold leading-tight tracking-tight">Waggies</h2>
+</div>
+<div class="hidden lg:flex items-center gap-9">
+<a class="text-slate-600 hover:text-primary text-sm font-medium leading-normal transition-colors" href="#">Shop</a>
+<a class="text-slate-600 hover:text-primary text-sm font-medium leading-normal transition-colors" href="#">Services</a>
+<a class="text-slate-600 hover:text-primary text-sm font-medium leading-normal transition-colors" href="#">About</a>
+<a class="text-primary text-sm font-semibold leading-normal" href="#">My Account</a>
+</div>
+</div>
+<div class="flex flex-1 justify-end gap-6">
+<label class="hidden md:flex flex-col min-w-40 !h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full border border-gray-200 bg-gray-50 focus-within:border-primary focus-within:ring-1 focus-within:ring-primary/20 transition-all">
+<div class="text-slate-400 flex items-center justify-center pl-4" data-icon="MagnifyingGlass">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg bg-transparent border-none text-slate-900 focus:outline-0 focus:ring-0 placeholder:text-slate-400 px-3 text-sm font-normal leading-normal" placeholder="Search products..."/>
+</div>
+</label>
+<div class="flex gap-3">
+<button class="flex size-10 cursor-pointer items-center justify-center rounded-full hover:bg-gray-100 text-slate-700 transition-colors">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+<button class="flex size-10 cursor-pointer items-center justify-center rounded-full hover:bg-gray-100 text-slate-700 transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="bg-center bg-no-repeat bg-cover rounded-full size-10 border border-gray-200 cursor-pointer" data-alt="User profile picture showing a smiling person" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDTf6kdOCDRm21oH2GO7ElTnqx-YjVaBKcCeKtuvFVefZBJWxoWC8RSj5aYkue3mYgnaM4XFyD3xFqobxOXFpuMKa_tr0lFdUqjg75P_sFonQBnVmTodc45utjQwhWfNmKTFNd9fbhtLWfCd2p1U3Q9LYGXXG3IQfTBXiVNpQDN6KaFvOZMIkvOJfxbt2dVvAKhv03LSwB4KCT6c_0xK8G_oEm7OrZNLQhAo7p78wD2uou4DLLD1WFz3UmXZWYfj6PtVg4b75hz7PM9");'></div>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="layout-container flex h-full grow flex-col">
+<div class="px-4 md:px-10 lg:px-40 flex flex-1 justify-center py-8">
+<div class="layout-content-container flex flex-col max-w-[1000px] flex-1 gap-8">
+<!-- Page Heading & Filters -->
+<div class="flex flex-col gap-6">
+<div class="flex flex-wrap justify-between items-end gap-4">
+<div class="flex min-w-72 flex-col gap-2">
+<h1 class="text-slate-900 text-3xl md:text-4xl font-black leading-tight tracking-[-0.033em]">Order History</h1>
+<p class="text-slate-500 text-base font-normal leading-normal">Track your packages and manage your purchase history.</p>
+</div>
+<div class="flex items-center gap-2 bg-white p-1 rounded-lg border border-gray-200 shadow-sm">
+<button class="px-4 py-2 rounded-md bg-primary text-white text-sm font-medium shadow-sm transition-all">All Orders</button>
+<button class="px-4 py-2 rounded-md hover:bg-gray-50 text-slate-600 text-sm font-medium transition-colors">Active</button>
+<button class="px-4 py-2 rounded-md hover:bg-gray-50 text-slate-600 text-sm font-medium transition-colors">Cancelled</button>
+</div>
+</div>
+</div>
+<!-- Active Shipment Card -->
+<section class="flex flex-col gap-4">
+<h2 class="text-slate-900 text-xl font-bold leading-tight px-1">Active Shipment</h2>
+<div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+<!-- Header of Card -->
+<div class="bg-primary-light/30 px-6 py-4 border-b border-gray-100 flex flex-wrap justify-between items-center gap-4">
+<div class="flex items-center gap-3">
+<div class="bg-primary/10 text-primary p-2 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined">local_shipping</span>
+</div>
+<div>
+<p class="text-slate-900 font-semibold">Arriving by Friday, Oct 24</p>
+<p class="text-slate-500 text-sm">Order #WAG-2025-8821 • Placed on Oct 20</p>
+</div>
+</div>
+<button class="text-primary hover:text-primary/80 font-medium text-sm flex items-center gap-1">
+                                    Track Details <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 p-6 md:p-8">
+<!-- Order Items Summary -->
+<div class="flex flex-col justify-between">
+<div class="flex gap-4">
+<div class="shrink-0 bg-gray-50 rounded-xl border border-gray-100 size-24 flex items-center justify-center overflow-hidden">
+<img class="h-full w-full object-cover" data-alt="Bag of premium dry dog food" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD51H1qtQdkRQPFsHnE8ulo_TIY5zD3OGzBz3UgrSPWEEhlmpoEqXhVYDO_4YillypNMgv0x0TyLIDx7njFFJjlnxdChGyuKG5nrRCj2WicvNPWWACNlI2yV17qVT8swPtMFguGigJZonTwqsx1Btraw1T-Ua-XFx_7BskG5fiyfY4b4vYd7UbP2t8TH1Ng3D1Q_vtx-Joc6oLNIGzaHXZ3j0HBQb_u_ISM9d6wOUSo6O1XWakjTRpXAXvUBYk6fvHhq3YQFYfyhvMq"/>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-slate-900 font-bold text-lg">Premium Dog Food (15kg)</h3>
+<p class="text-slate-500 text-sm">Flavor: Chicken &amp; Rice</p>
+<p class="text-slate-500 text-sm">+ 2 other items (Grooming Brush, Chew Toy)</p>
+<p class="text-primary font-bold mt-2">₦45,000</p>
+</div>
+</div>
+<div class="mt-6 flex gap-3">
+<button class="flex-1 rounded-lg border border-gray-200 bg-white px-4 py-2.5 text-slate-700 font-medium text-sm hover:bg-gray-50 transition-colors">View Invoice</button>
+<button class="flex-1 rounded-lg bg-primary px-4 py-2.5 text-white font-medium text-sm hover:bg-primary/90 transition-colors shadow-sm shadow-primary/30">Support</button>
+</div>
+</div>
+<!-- Vertical Timeline (Desktop: Right side) -->
+<div class="relative pl-2 md:pl-8 md:border-l border-gray-100">
+<div class="grid grid-cols-[32px_1fr] gap-x-4">
+<!-- Step 1 -->
+<div class="flex flex-col items-center">
+<div class="text-primary bg-white z-10" data-icon="CheckCircle">
+<span class="material-symbols-outlined text-[24px]">check_circle</span>
+</div>
+<div class="w-[2px] bg-primary h-full min-h-[40px]"></div>
+</div>
+<div class="pb-6 pt-0.5">
+<p class="text-slate-900 text-sm font-semibold">Order Placed</p>
+<p class="text-slate-400 text-xs">Oct 20, 2:30 PM</p>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col items-center">
+<div class="text-primary bg-white z-10" data-icon="Processing">
+<span class="material-symbols-outlined text-[24px]">inventory_2</span>
+</div>
+<div class="w-[2px] bg-primary h-full min-h-[40px]"></div>
+</div>
+<div class="pb-6 pt-0.5">
+<p class="text-slate-900 text-sm font-semibold">Processing</p>
+<p class="text-slate-400 text-xs">Oct 21, 9:00 AM</p>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col items-center">
+<div class="text-primary bg-white z-10" data-icon="Truck">
+<span class="material-symbols-outlined text-[24px]">local_shipping</span>
+</div>
+<div class="w-[2px] bg-gray-200 h-full min-h-[40px]"></div>
+</div>
+<div class="pb-6 pt-0.5">
+<p class="text-primary text-sm font-semibold">Shipped</p>
+<p class="text-slate-500 text-xs">Oct 22, 4:15 PM • On the way to Abuja Hub</p>
+</div>
+<!-- Step 4 -->
+<div class="flex flex-col items-center">
+<div class="text-gray-300 bg-white z-10" data-icon="Package">
+<span class="material-symbols-outlined text-[24px]">home</span>
+</div>
+</div>
+<div class="pt-0.5">
+<p class="text-slate-400 text-sm font-medium">Delivered</p>
+<p class="text-slate-400 text-xs">Estimated Oct 24</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Past Orders List -->
+<section class="flex flex-col gap-4">
+<h2 class="text-slate-900 text-xl font-bold leading-tight px-1 pt-4">Past Orders</h2>
+<div class="flex flex-col gap-3">
+<!-- List Item 1 -->
+<div class="group flex flex-col md:flex-row gap-4 bg-white p-5 rounded-xl border border-gray-100 shadow-sm hover:border-primary/30 transition-all">
+<div class="flex flex-1 items-start gap-4">
+<div class="bg-center bg-no-repeat bg-cover rounded-lg size-20 shrink-0 bg-gray-50 border border-gray-100" data-alt="Dog shampoo bottle" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAEY2AYVdsuZkqXIG6-kh8g0yymSz4CP51CfglsGuMKqk_UvuHaT2BxMGvRhaF4nxNRz2Iz_Qy15XgD4Ym_amPsfQ0koNjvqN2vs8JvcFvl6zHJPlF56FHWS0zozjv9a_mig7MWpoijYoxVw58taQjRxHjCfVYi_fzz9vWyTkYpmPMKxZIFfXcdno6IEAhwkoxo6NvLZuQgnyYKZq0IQueoTAXpwSCUsHpmqqPiKlvHTaXjHZqJs8khyquO3PrfAuGoS0XBijS6zGbz");'></div>
+<div class="flex flex-col justify-center gap-1">
+<div class="flex items-center gap-2 flex-wrap">
+<p class="text-slate-900 text-base font-bold leading-normal">Order #WAG-2025-7201</p>
+<span class="bg-green-100 text-green-700 text-xs font-bold px-2 py-0.5 rounded-full">Delivered</span>
+</div>
+<p class="text-slate-500 text-sm font-normal leading-normal">Oct 05, 2025 • Organic Dog Shampoo (500ml)</p>
+<p class="text-slate-900 text-sm font-semibold">₦8,500</p>
+</div>
+</div>
+<div class="flex items-center gap-3 pt-2 md:pt-0 border-t md:border-t-0 border-gray-100 mt-2 md:mt-0 justify-end">
+<button class="flex items-center justify-center rounded-lg h-9 px-4 bg-white border border-gray-200 text-slate-700 text-sm font-medium hover:bg-gray-50 transition-colors">
+                                        View Details
+                                    </button>
+<button class="flex items-center justify-center rounded-lg h-9 px-4 bg-primary text-white text-sm font-medium shadow-sm hover:bg-primary/90 transition-colors">
+<span class="material-symbols-outlined text-[18px] mr-2">refresh</span>
+                                        Reorder
+                                    </button>
+</div>
+</div>
+<!-- List Item 2 -->
+<div class="group flex flex-col md:flex-row gap-4 bg-white p-5 rounded-xl border border-gray-100 shadow-sm hover:border-primary/30 transition-all">
+<div class="flex flex-1 items-start gap-4">
+<div class="bg-center bg-no-repeat bg-cover rounded-lg size-20 shrink-0 bg-gray-50 border border-gray-100" data-alt="Rubber dog chew toy" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBkPwpj11jo2uVpDZ6PgSyZUyButx_DagXWDmSRrrVoK2xhpj8VHT14k-8BEfeehdc1rdm_jhkAVOkf06KoCakSy731z-YoylYFqL4OR8a28SEINAOEUENc0A7QLB53eIUnIZi0cLqWREv85oVZeD8gQrO9jnGuTzzbr_H_bCgW62FarGn6k5B2bvQ-ukHhuRDXuTkDkwlEydK1CAfS2ZCrx7WjLDp2Hmsrm_8pd2J_lUd9nVCnEmfsTelaDqJumKVsRmvvxv3RuqPA");'></div>
+<div class="flex flex-col justify-center gap-1">
+<div class="flex items-center gap-2 flex-wrap">
+<p class="text-slate-900 text-base font-bold leading-normal">Order #WAG-2025-6599</p>
+<span class="bg-green-100 text-green-700 text-xs font-bold px-2 py-0.5 rounded-full">Delivered</span>
+</div>
+<p class="text-slate-500 text-sm font-normal leading-normal">Sep 28, 2025 • Indestructible Chew Toy + 3 items</p>
+<p class="text-slate-900 text-sm font-semibold">₦22,000</p>
+</div>
+</div>
+<div class="flex items-center gap-3 pt-2 md:pt-0 border-t md:border-t-0 border-gray-100 mt-2 md:mt-0 justify-end">
+<button class="flex items-center justify-center rounded-lg h-9 px-4 bg-white border border-gray-200 text-slate-700 text-sm font-medium hover:bg-gray-50 transition-colors">
+                                        View Details
+                                    </button>
+<button class="flex items-center justify-center rounded-lg h-9 px-4 bg-primary text-white text-sm font-medium shadow-sm hover:bg-primary/90 transition-colors">
+<span class="material-symbols-outlined text-[18px] mr-2">refresh</span>
+                                        Reorder
+                                    </button>
+</div>
+</div>
+<!-- List Item 3 (Return) -->
+<div class="group flex flex-col md:flex-row gap-4 bg-white p-5 rounded-xl border border-gray-100 shadow-sm hover:border-primary/30 transition-all opacity-80 hover:opacity-100">
+<div class="flex flex-1 items-start gap-4">
+<div class="bg-center bg-no-repeat bg-cover rounded-lg size-20 shrink-0 bg-gray-50 border border-gray-100" data-alt="Dog collar with geometric pattern" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB-cFKKv90x6jy2U4gn0DA3G46-FZI0dqrQu9EXVANvMtiNC2_-_3_8ppa-rIvbt7WlXLRuFFKKIaCUkUoPSTuk198I65kYtOqlp70WLIDSXaEg6Kth0G_k8K7-jcJuXtzFOrnJMzHUoKb9n2SG0qtXmngU44oOazGBcUPjB9qoqVvhgdzlkMFWGtfp4gJJYT9t8HyggE3K9m8WNR_BRVTWSl-JkKev0KjPSUtFwAh-SIWau-iIpHg7KqDeyNCyuXHakNhyVDYNJYDA");'></div>
+<div class="flex flex-col justify-center gap-1">
+<div class="flex items-center gap-2 flex-wrap">
+<p class="text-slate-900 text-base font-bold leading-normal">Order #WAG-2025-1102</p>
+<span class="bg-slate-100 text-slate-600 text-xs font-bold px-2 py-0.5 rounded-full">Returned</span>
+</div>
+<p class="text-slate-500 text-sm font-normal leading-normal">Aug 15, 2025 • Luxury Leather Collar (Red)</p>
+<p class="text-slate-900 text-sm font-semibold">₦12,500 <span class="text-xs font-normal text-slate-400 line-through">Refunded</span></p>
+</div>
+</div>
+<div class="flex items-center gap-3 pt-2 md:pt-0 border-t md:border-t-0 border-gray-100 mt-2 md:mt-0 justify-end">
+<button class="flex items-center justify-center rounded-lg h-9 px-4 bg-white border border-gray-200 text-slate-700 text-sm font-medium hover:bg-gray-50 transition-colors">
+                                        View Details
+                                    </button>
+<!-- No Reorder for returned typically, but maybe 'Buy Again' -->
+<button class="flex items-center justify-center rounded-lg h-9 px-4 bg-white border border-gray-200 text-primary text-sm font-medium hover:bg-gray-50 transition-colors">
+                                        Buy Again
+                                    </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Empty State / Shop Promo -->
+<div class="mt-8 rounded-2xl bg-gradient-to-r from-primary to-[#9d4edd] p-8 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-lg shadow-primary/20">
+<div class="flex flex-col gap-2 text-center md:text-left">
+<h3 class="text-2xl font-bold">Need something else for your furry friend?</h3>
+<p class="text-white/90">Browse our shop for the latest treats, toys, and grooming essentials.</p>
+</div>
+<button class="whitespace-nowrap rounded-lg bg-white px-6 py-3 text-primary font-bold hover:bg-gray-50 transition-colors shadow-sm">
+                            Go to Shop
+                        </button>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

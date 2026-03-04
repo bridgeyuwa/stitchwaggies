@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FAQ - Waggies Pet Services</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#7f13ec",
+                        "background-light": "#f7f6f8",
+                        "background-dark": "#ffffff", /* Ensuring light appearance even in dark mode context as requested */
+                        "secondary-text": "#756189",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+        /* Smooth expand animation logic */
+        details[open] summary ~ * {
+            animation: sweep .2s ease-in-out;
+        }
+        @keyframes sweep {
+            0%    {opacity: 0; transform: translateY(-5px)}
+            100%  {opacity: 1; transform: translateY(0)}
+        }
+        details[open] .icon-expand {
+            transform: rotate(180deg);
+        }
+        /* Hide scrollbar for horizontal scroll areas */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen flex flex-col font-display text-[#141118]">
+<!-- Top Navbar -->
+<header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-[#f2f0f4]">
+<div class="px-4 md:px-10 py-3 flex items-center justify-between whitespace-nowrap max-w-[1440px] mx-auto w-full">
+<div class="flex items-center gap-4 text-[#141118]">
+<div class="size-8 text-primary">
+<svg class="w-full h-full" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M39.5563 34.1455V13.8546C39.5563 15.708 36.8773 17.3437 32.7927 18.3189C30.2914 18.916 27.263 19.2655 24 19.2655C20.737 19.2655 17.7086 18.916 15.2073 18.3189C11.1227 17.3437 8.44365 15.708 8.44365 13.8546V34.1455C8.44365 35.9988 11.1227 37.6346 15.2073 38.6098C17.7086 39.2069 20.737 39.5564 24 39.5564C27.263 39.5564 30.2914 39.2069 32.7927 38.6098C36.8773 37.6346 39.5563 35.9988 39.5563 34.1455Z" fill="currentColor"></path>
+<path clip-rule="evenodd" d="M10.4485 13.8519C10.4749 13.9271 10.6203 14.246 11.379 14.7361C12.298 15.3298 13.7492 15.9145 15.6717 16.3735C18.0007 16.9296 20.8712 17.2655 24 17.2655C27.1288 17.2655 29.9993 16.9296 32.3283 16.3735C34.2508 15.9145 35.702 15.3298 36.621 14.7361C37.3796 14.246 37.5251 13.9271 37.5515 13.8519C37.5287 13.7876 37.4333 13.5973 37.0635 13.2931C36.5266 12.8516 35.6288 12.3647 34.343 11.9175C31.79 11.0295 28.1333 10.4437 24 10.4437C19.8667 10.4437 16.2099 11.0295 13.657 11.9175C12.3712 12.3647 11.4734 12.8516 10.9365 13.2931C10.5667 13.5973 10.4713 13.7876 10.4485 13.8519ZM37.5563 18.7877C36.3176 19.3925 34.8502 19.8839 33.2571 20.2642C30.5836 20.9025 27.3973 21.2655 24 21.2655C20.6027 21.2655 17.4164 20.9025 14.7429 20.2642C13.1498 19.8839 11.6824 19.3925 10.4436 18.7877V34.1275C10.4515 34.1545 10.5427 34.4867 11.379 35.027C12.298 35.6207 13.7492 36.2054 15.6717 36.6644C18.0007 37.2205 20.8712 37.5564 24 37.5564C27.1288 37.5564 29.9993 37.2205 32.3283 36.6644C34.2508 36.2054 35.702 35.6207 36.621 35.027C37.4573 34.4867 37.5485 34.1546 37.5563 34.1275V18.7877ZM41.5563 13.8546V34.1455C41.5563 36.1078 40.158 37.5042 38.7915 38.3869C37.3498 39.3182 35.4192 40.0389 33.2571 40.5551C30.5836 41.1934 27.3973 41.5564 24 41.5564C20.6027 41.5564 17.4164 41.1934 14.7429 40.5551C12.5808 40.0389 10.6502 39.3182 9.20848 38.3869C7.84205 37.5042 6.44365 36.1078 6.44365 34.1455L6.44365 13.8546C6.44365 12.2684 7.37223 11.0454 8.39581 10.2036C9.43325 9.3505 10.8137 8.67141 12.343 8.13948C15.4203 7.06909 19.5418 6.44366 24 6.44366C28.4582 6.44366 32.5797 7.06909 35.657 8.13948C37.1863 8.67141 38.5667 9.3505 39.6042 10.2036C40.6278 11.0454 41.5563 12.2684 41.5563 13.8546Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-[#141118] text-xl font-bold leading-tight tracking-tight">Waggies Pet Services</h2>
+</div>
+<div class="hidden lg:flex items-center gap-9">
+<a class="text-[#141118] text-sm font-medium hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-[#141118] text-sm font-medium hover:text-primary transition-colors" href="#">Services</a>
+<a class="text-[#141118] text-sm font-medium hover:text-primary transition-colors" href="#">About Us</a>
+<a class="text-primary text-sm font-bold hover:text-primary transition-colors" href="#">FAQ</a>
+<a class="text-[#141118] text-sm font-medium hover:text-primary transition-colors" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-primary hover:bg-[#6a10c4] transition-colors text-white text-sm font-bold shadow-lg shadow-purple-200">
+<span class="truncate">Request Quote</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content Wrapper -->
+<main class="flex-grow flex flex-col items-center">
+<!-- Breadcrumbs -->
+<div class="w-full max-w-[1200px] px-4 pt-6">
+<div class="flex flex-wrap gap-2 text-sm">
+<a class="text-secondary-text hover:text-primary transition-colors" href="#">Home</a>
+<span class="text-secondary-text">/</span>
+<a class="text-secondary-text hover:text-primary transition-colors" href="#">Support</a>
+<span class="text-secondary-text">/</span>
+<span class="text-[#141118] font-medium">FAQ</span>
+</div>
+</div>
+<!-- Hero Section -->
+<div class="w-full max-w-[1200px] px-4 py-8 md:py-12">
+<div class="flex flex-col items-center text-center gap-4 mb-10">
+<p class="text-primary font-bold text-sm tracking-widest uppercase">Support Center</p>
+<h1 class="text-[#141118] text-4xl md:text-5xl font-black leading-tight tracking-[-0.033em]">How can we help?</h1>
+<p class="text-secondary-text text-lg max-w-2xl">Find clear answers about our premium boarding, relocation, grooming, and vet services in Abuja.</p>
+</div>
+<!-- Large Search Bar -->
+<div class="w-full max-w-2xl mx-auto mb-16 relative group">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-secondary-text group-focus-within:text-primary transition-colors">search</span>
+</div>
+<input class="block w-full h-14 pl-12 pr-4 rounded-xl border-none bg-white shadow-[0_4px_20px_rgba(0,0,0,0.05)] text-lg text-[#141118] placeholder:text-gray-400 focus:ring-2 focus:ring-primary focus:bg-white transition-all" placeholder="Search for answers (e.g., 'vaccination requirements', 'import permit')" type="text"/>
+</div>
+</div>
+<!-- Content Split Layout -->
+<div class="w-full max-w-[1200px] px-4 pb-20 grid grid-cols-1 lg:grid-cols-12 gap-10">
+<!-- Sidebar Navigation (Sticky) -->
+<aside class="col-span-1 lg:col-span-3 lg:block">
+<div class="lg:sticky lg:top-24">
+<h3 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-4 px-3 hidden lg:block">Categories</h3>
+<!-- Mobile Horizontal Scroll / Desktop Vertical List -->
+<div class="flex lg:flex-col overflow-x-auto lg:overflow-visible gap-2 pb-4 lg:pb-0 no-scrollbar">
+<a class="flex-shrink-0 px-4 py-3 rounded-lg bg-primary/10 text-primary font-bold text-sm flex items-center gap-3 transition-colors border-l-4 border-primary" href="#general">
+<span class="material-symbols-outlined text-[20px]">info</span>
+                            General Queries
+                        </a>
+<a class="flex-shrink-0 px-4 py-3 rounded-lg hover:bg-white hover:shadow-sm text-[#5f4e6e] font-medium text-sm flex items-center gap-3 transition-all border-l-4 border-transparent hover:border-gray-200" href="#boarding">
+<span class="material-symbols-outlined text-[20px]">home_work</span>
+                            Boarding &amp; Daycare
+                        </a>
+<a class="flex-shrink-0 px-4 py-3 rounded-lg hover:bg-white hover:shadow-sm text-[#5f4e6e] font-medium text-sm flex items-center gap-3 transition-all border-l-4 border-transparent hover:border-gray-200" href="#relocation">
+<span class="material-symbols-outlined text-[20px]">flight_takeoff</span>
+                            Pet Relocation
+                        </a>
+<a class="flex-shrink-0 px-4 py-3 rounded-lg hover:bg-white hover:shadow-sm text-[#5f4e6e] font-medium text-sm flex items-center gap-3 transition-all border-l-4 border-transparent hover:border-gray-200" href="#grooming">
+<span class="material-symbols-outlined text-[20px]">content_cut</span>
+                            Grooming &amp; Spa
+                        </a>
+<a class="flex-shrink-0 px-4 py-3 rounded-lg hover:bg-white hover:shadow-sm text-[#5f4e6e] font-medium text-sm flex items-center gap-3 transition-all border-l-4 border-transparent hover:border-gray-200" href="#vet">
+<span class="material-symbols-outlined text-[20px]">medical_services</span>
+                            Vet Care
+                        </a>
+<a class="flex-shrink-0 px-4 py-3 rounded-lg hover:bg-white hover:shadow-sm text-[#5f4e6e] font-medium text-sm flex items-center gap-3 transition-all border-l-4 border-transparent hover:border-gray-200" href="#pricing">
+<span class="material-symbols-outlined text-[20px]">payments</span>
+                            Pricing &amp; Booking
+                        </a>
+</div>
+</div>
+</aside>
+<!-- Main FAQ Content -->
+<div class="col-span-1 lg:col-span-9 flex flex-col gap-12">
+<!-- Section: General -->
+<div class="scroll-mt-24" id="general">
+<div class="flex items-center gap-3 mb-6">
+<div class="size-10 rounded-full bg-purple-100 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">info</span>
+</div>
+<h2 class="text-2xl font-bold text-[#141118]">General Queries</h2>
+</div>
+<div class="bg-white rounded-2xl shadow-sm border border-gray-100 px-6 divide-y divide-gray-100">
+<details class="group">
+<summary class="flex cursor-pointer items-center justify-between py-5 text-base md:text-lg font-semibold text-[#141118] hover:text-primary transition-colors">
+                                Where is Waggies Pet Services located?
+                                <span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-transform duration-300 icon-expand">expand_more</span>
+</summary>
+<div class="pb-5 text-secondary-text leading-relaxed">
+                                We are conveniently located in the heart of Abuja. For security and privacy of our boarded guests, the exact address is provided upon booking confirmation. However, we offer pick-up and drop-off services across all Abuja districts including Maitama, Asokoro, Wuse II, and Gwarinpa.
+                            </div>
+</details>
+<details class="group">
+<summary class="flex cursor-pointer items-center justify-between py-5 text-base md:text-lg font-semibold text-[#141118] hover:text-primary transition-colors">
+                                What are your operating hours?
+                                <span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-transform duration-300 icon-expand">expand_more</span>
+</summary>
+<div class="pb-5 text-secondary-text leading-relaxed">
+                                Our facility is staffed 24/7 for our boarding guests. For drop-offs, pick-ups, and grooming appointments, our reception is open Monday through Saturday from 8:00 AM to 6:00 PM, and Sundays from 12:00 PM to 5:00 PM.
+                            </div>
+</details>
+<details class="group">
+<summary class="flex cursor-pointer items-center justify-between py-5 text-base md:text-lg font-semibold text-[#141118] hover:text-primary transition-colors">
+                                Is there a vet on-site at all times?
+                                <span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-transform duration-300 icon-expand">expand_more</span>
+</summary>
+<div class="pb-5 text-secondary-text leading-relaxed">
+                                Yes, we have a resident veterinary technician on-site 24/7 to monitor all pets. Our senior veterinarian is present during business hours and is on-call for any after-hours emergencies.
+                            </div>
+</details>
+<details class="group">
+<summary class="flex cursor-pointer items-center justify-between py-5 text-base md:text-lg font-semibold text-[#141118] hover:text-primary transition-colors">
+                                What payment methods do you accept?
+                                <span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-transform duration-300 icon-expand">expand_more</span>
+</summary>
+<div class="pb-5 text-secondary-text leading-relaxed">
+                                We accept bank transfers, POS payments (Visa, Mastercard, Verve), and cash. For international clients booking relocation services, we can also accept international wire transfers or USD payments upon request.
+                            </div>
+</details>
+</div>
+</div>
+<!-- Section: Boarding -->
+<div class="scroll-mt-24" id="boarding">
+<div class="flex items-center gap-3 mb-6">
+<div class="size-10 rounded-full bg-purple-100 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">home_work</span>
+</div>
+<h2 class="text-2xl font-bold text-[#141118]">Boarding &amp; Daycare</h2>
+</div>
+<div class="bg-white rounded-2xl shadow-sm border border-gray-100 px-6 divide-y divide-gray-100">
+<details class="group">
+<summary class="flex cursor-pointer items-center justify-between py-5 text-base md:text-lg font-semibold text-[#141118] hover:text-primary transition-colors">
+                                What vaccinations are required for boarding?
+                                <span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-transform duration-300 icon-expand">expand_more</span>
+</summary>
+<div class="pb-5 text-secondary-text leading-relaxed">
+                                To ensure the safety of all our guests, we strictly require up-to-date vaccination records for Rabies, DHLPP (Distemper, Hepatitis, Leptospirosis, Parvovirus, Parainfluenza), and Kennel Cough. Records must be submitted at least 48 hours prior to check-in.
+                            </div>
+</details>
+<details class="group">
+<summary class="flex cursor-pointer items-center justify-between py-5 text-base md:text-lg font-semibold text-[#141118] hover:text-primary transition-colors">
+                                Can I bring my dog's own food?
+                                <span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-transform duration-300 icon-expand">expand_more</span>
+</summary>
+<div class="pb-5 text-secondary-text leading-relaxed">
+                                Absolutely! In fact, we highly encourage it to prevent stomach upset. Please bring enough food for the duration of the stay, labeled with your pet's name and feeding instructions. If you prefer, we can provide our premium house diet for an additional daily fee.
+                            </div>
+</details>
+<details class="group">
+<summary class="flex cursor-pointer items-center justify-between py-5 text-base md:text-lg font-semibold text-[#141118] hover:text-primary transition-colors">
+                                How much playtime do the dogs get?
+                                <span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-transform duration-300 icon-expand">expand_more</span>
+</summary>
+<div class="pb-5 text-secondary-text leading-relaxed">
+                                Standard boarding includes 3 supervised play sessions per day in our secure, grassy outdoor yards. For high-energy breeds, you can upgrade to our "Active Paws" package which includes additional one-on-one fetch sessions or agility training.
+                            </div>
+</details>
+<details class="group">
+<summary class="flex cursor-pointer items-center justify-between py-5 text-base md:text-lg font-semibold text-[#141118] hover:text-primary transition-colors">
+                                Do you accept aggressive dogs?
+                                <span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-transform duration-300 icon-expand">expand_more</span>
+</summary>
+<div class="pb-5 text-secondary-text leading-relaxed">
+                                For the safety of our staff and other guests, we conduct a temperament assessment for all new dogs. We generally do not accept aggressive dogs for group play, but we may offer "Solo Boarding" where the dog is handled individually by senior staff, subject to assessment.
+                            </div>
+</details>
+<details class="group">
+<summary class="flex cursor-pointer items-center justify-between py-5 text-base md:text-lg font-semibold text-[#141118] hover:text-primary transition-colors">
+                                Can I visit my pet during their stay?
+                                <span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-transform duration-300 icon-expand">expand_more</span>
+</summary>
+<div class="pb-5 text-secondary-text leading-relaxed">
+                                While we understand you miss them, visits can often cause separation anxiety and stress for the pet when you leave again. We recommend video calls instead! We offer daily photo/video updates via WhatsApp so you can see how much fun they are having.
+                            </div>
+</details>
+</div>
+</div>
+<!-- Section: Relocation -->
+<div class="scroll-mt-24" id="relocation">
+<div class="flex items-center gap-3 mb-6">
+<div class="size-10 rounded-full bg-purple-100 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">flight_takeoff</span>
+</div>
+<h2 class="text-2xl font-bold text-[#141118]">Pet Relocation (Import/Export)</h2>
+</div>
+<div class="bg-white rounded-2xl shadow-sm border border-gray-100 px-6 divide-y divide-gray-100">
+<details class="group">
+<summary class="flex cursor-pointer items-center justify-between py-5 text-base md:text-lg font-semibold text-[#141118] hover:text-primary transition-colors">
+                                Do you handle international pet export from Nigeria?
+                                <span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-transform duration-300 icon-expand">expand_more</span>
+</summary>
+<div class="pb-5 text-secondary-text leading-relaxed">
+                                Yes, we are experts in pet travel. We handle the entire export process from Abuja or Lagos to virtually any country, including the UK, USA, Canada, and EU. Services include flight booking, export permits, veterinary health certificates, and IATA-approved crates.
+                            </div>
+</details>
+<details class="group">
+<summary class="flex cursor-pointer items-center justify-between py-5 text-base md:text-lg font-semibold text-[#141118] hover:text-primary transition-colors">
+                                How long does the import permit process take?
+                                <span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-transform duration-300 icon-expand">expand_more</span>
+</summary>
+<div class="pb-5 text-secondary-text leading-relaxed">
+                                For importing pets into Nigeria, the import permit typically takes 3-5 business days to process once we have all required documentation from you. We recommend starting the process at least 2 weeks before your travel date.
+                            </div>
+</details>
+<details class="group">
+<summary class="flex cursor-pointer items-center justify-between py-5 text-base md:text-lg font-semibold text-[#141118] hover:text-primary transition-colors">
+                                Do you provide IATA compliant crates?
+                                <span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-transform duration-300 icon-expand">expand_more</span>
+</summary>
+<div class="pb-5 text-secondary-text leading-relaxed">
+                                Yes, we stock a full range of IATA-compliant travel crates. If you are relocating with us, we will measure your pet to ensure they have the exact size required by airlines for safety and comfort. We also offer custom wooden crates for giant breeds.
+                            </div>
+</details>
+<details class="group">
+<summary class="flex cursor-pointer items-center justify-between py-5 text-base md:text-lg font-semibold text-[#141118] hover:text-primary transition-colors">
+                                What is the blood titer test requirement?
+                                <span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-transform duration-300 icon-expand">expand_more</span>
+</summary>
+<div class="pb-5 text-secondary-text leading-relaxed">
+                                Many countries (like the UK, EU, and South Africa) require a Rabies Neutralizing Antibody Titer Test (RNATT). This test usually requires a 3-month waiting period after the blood draw before travel. We facilitate the blood draw and shipment to approved labs abroad.
+                            </div>
+</details>
+</div>
+</div>
+<!-- Section: Grooming -->
+<div class="scroll-mt-24" id="grooming">
+<div class="flex items-center gap-3 mb-6">
+<div class="size-10 rounded-full bg-purple-100 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">content_cut</span>
+</div>
+<h2 class="text-2xl font-bold text-[#141118]">Grooming &amp; Spa</h2>
+</div>
+<div class="bg-white rounded-2xl shadow-sm border border-gray-100 px-6 divide-y divide-gray-100">
+<details class="group">
+<summary class="flex cursor-pointer items-center justify-between py-5 text-base md:text-lg font-semibold text-[#141118] hover:text-primary transition-colors">
+                                Do you sedate pets for grooming?
+                                <span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-transform duration-300 icon-expand">expand_more</span>
+</summary>
+<div class="pb-5 text-secondary-text leading-relaxed">
+                                We operate with a strict "humanity over vanity" policy. We generally do NOT sedate pets for grooming. However, for extremely aggressive or matted dogs where grooming is medically necessary, sedation can be performed ONLY by our on-site veterinarian with your written consent and monitoring.
+                            </div>
+</details>
+<details class="group">
+<summary class="flex cursor-pointer items-center justify-between py-5 text-base md:text-lg font-semibold text-[#141118] hover:text-primary transition-colors">
+                                How often should I groom my dog?
+                                <span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-transform duration-300 icon-expand">expand_more</span>
+</summary>
+<div class="pb-5 text-secondary-text leading-relaxed">
+                                This depends on the breed. Long-haired breeds (like Lhasa Apsos, Poodles) typically need grooming every 4-6 weeks to prevent matting. Short-haired breeds can benefit from a wash and de-shedding treatment every 8-12 weeks.
+                            </div>
+</details>
+<details class="group">
+<summary class="flex cursor-pointer items-center justify-between py-5 text-base md:text-lg font-semibold text-[#141118] hover:text-primary transition-colors">
+                                What does a "Full Groom" include?
+                                <span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-transform duration-300 icon-expand">expand_more</span>
+</summary>
+<div class="pb-5 text-secondary-text leading-relaxed">
+                                Our Full Groom package includes a pre-brush, warm water bath with premium shampoo, blow dry, full body haircut/styling, nail clipping, ear cleaning, and anal gland expression (if needed).
+                            </div>
+</details>
+</div>
+</div>
+<!-- Section: Vet Care -->
+<div class="scroll-mt-24" id="vet">
+<div class="flex items-center gap-3 mb-6">
+<div class="size-10 rounded-full bg-purple-100 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">medical_services</span>
+</div>
+<h2 class="text-2xl font-bold text-[#141118]">Vet Care</h2>
+</div>
+<div class="bg-white rounded-2xl shadow-sm border border-gray-100 px-6 divide-y divide-gray-100">
+<details class="group">
+<summary class="flex cursor-pointer items-center justify-between py-5 text-base md:text-lg font-semibold text-[#141118] hover:text-primary transition-colors">
+                                Do you offer microchipping?
+                                <span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-transform duration-300 icon-expand">expand_more</span>
+</summary>
+<div class="pb-5 text-secondary-text leading-relaxed">
+                                Yes, we offer ISO-compliant 15-digit microchips which are required for international travel and are the gold standard for pet identification. The procedure is quick, similar to a vaccination shot, and provides permanent ID for your pet.
+                            </div>
+</details>
+<details class="group">
+<summary class="flex cursor-pointer items-center justify-between py-5 text-base md:text-lg font-semibold text-[#141118] hover:text-primary transition-colors">
+                                Can you handle emergency surgeries?
+                                <span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-transform duration-300 icon-expand">expand_more</span>
+</summary>
+<div class="pb-5 text-secondary-text leading-relaxed">
+                                Our clinic is equipped for routine soft tissue surgeries (spay/neuter, mass removal). For complex orthopedic or specialized emergency surgeries, we stabilize the patient and refer to our partner specialist hospital in Abuja while managing the transport.
+                            </div>
+</details>
+</div>
+</div>
+<!-- Section: Pricing -->
+<div class="scroll-mt-24" id="pricing">
+<div class="flex items-center gap-3 mb-6">
+<div class="size-10 rounded-full bg-purple-100 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<h2 class="text-2xl font-bold text-[#141118]">Pricing &amp; Booking</h2>
+</div>
+<div class="bg-white rounded-2xl shadow-sm border border-gray-100 px-6 divide-y divide-gray-100">
+<details class="group">
+<summary class="flex cursor-pointer items-center justify-between py-5 text-base md:text-lg font-semibold text-[#141118] hover:text-primary transition-colors">
+                                Do I need to pay a deposit?
+                                <span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-transform duration-300 icon-expand">expand_more</span>
+</summary>
+<div class="pb-5 text-secondary-text leading-relaxed">
+                                Yes, for boarding and relocation services, a 50% deposit is required to secure your dates. The balance is due upon check-in (for boarding) or prior to flight booking (for relocation).
+                            </div>
+</details>
+<details class="group">
+<summary class="flex cursor-pointer items-center justify-between py-5 text-base md:text-lg font-semibold text-[#141118] hover:text-primary transition-colors">
+                                What is your cancellation policy?
+                                <span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-transform duration-300 icon-expand">expand_more</span>
+</summary>
+<div class="pb-5 text-secondary-text leading-relaxed">
+                                Cancellations made more than 7 days before the service date are eligible for a full refund of the deposit. Cancellations within 3-7 days forfeit 50% of the deposit. Cancellations less than 48 hours prior are non-refundable.
+                            </div>
+</details>
+<details class="group">
+<summary class="flex cursor-pointer items-center justify-between py-5 text-base md:text-lg font-semibold text-[#141118] hover:text-primary transition-colors">
+                                Do you offer discounts for long stays?
+                                <span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-transform duration-300 icon-expand">expand_more</span>
+</summary>
+<div class="pb-5 text-secondary-text leading-relaxed">
+                                Yes, we offer a 10% discount on boarding fees for stays longer than 30 days. We also have loyalty packages for frequent grooming clients.
+                            </div>
+</details>
+</div>
+</div>
+</div>
+</div>
+<!-- CTA Section -->
+<section class="w-full bg-[#191022] py-16 px-4">
+<div class="max-w-[1200px] mx-auto bg-primary rounded-3xl p-10 md:p-16 relative overflow-hidden shadow-2xl">
+<!-- Abstract Circles -->
+<div class="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-white opacity-10 blur-3xl"></div>
+<div class="absolute bottom-0 left-0 w-60 h-60 rounded-full bg-purple-900 opacity-20 blur-3xl"></div>
+<div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-10">
+<div class="flex-1 text-center md:text-left">
+<h2 class="text-white text-3xl md:text-4xl font-bold mb-4">Still haven't found what you're looking for?</h2>
+<p class="text-purple-100 text-lg opacity-90 max-w-xl">Our team is ready to answer any specific questions about your pet's needs. Get in touch for a personalized consultation.</p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-white text-primary hover:bg-gray-50 px-8 py-4 rounded-xl font-bold text-base shadow-lg transition-transform transform hover:-translate-y-1">
+                            Contact Support
+                        </button>
+<button class="bg-purple-900/40 border border-purple-400/30 text-white hover:bg-purple-900/60 px-8 py-4 rounded-xl font-bold text-base backdrop-blur-sm transition-transform transform hover:-translate-y-1">
+                            Request Quote
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-white border-t border-[#f2f0f4] pt-16 pb-8">
+<div class="max-w-[1200px] mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 mb-6 text-[#141118]">
+<div class="size-6 text-primary">
+<svg class="w-full h-full" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M39.5563 34.1455V13.8546C39.5563 15.708 36.8773 17.3437 32.7927 18.3189C30.2914 18.916 27.263 19.2655 24 19.2655C20.737 19.2655 17.7086 18.916 15.2073 18.3189C11.1227 17.3437 8.44365 15.708 8.44365 13.8546V34.1455C8.44365 35.9988 11.1227 37.6346 15.2073 38.6098C17.7086 39.2069 20.737 39.5564 24 39.5564C27.263 39.5564 30.2914 39.2069 32.7927 38.6098C36.8773 37.6346 39.5563 35.9988 39.5563 34.1455Z" fill="currentColor"></path>
+</svg>
+</div>
+<span class="font-bold text-lg">Waggies</span>
+</div>
+<p class="text-[#756189] text-sm leading-relaxed mb-6">
+                        Premium pet services in Abuja. We treat your pets like royalty because they deserve nothing less.
+                    </p>
+<div class="flex gap-4">
+<div class="size-8 rounded-full bg-gray-100 flex items-center justify-center text-[#756189] hover:bg-primary hover:text-white transition-colors cursor-pointer" data-alt="Facebook icon">
+<svg aria-hidden="true" class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24"><path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path></svg>
+</div>
+<div class="size-8 rounded-full bg-gray-100 flex items-center justify-center text-[#756189] hover:bg-primary hover:text-white transition-colors cursor-pointer" data-alt="Instagram icon">
+<svg aria-hidden="true" class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24"><path clip-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.468 2.373c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" fill-rule="evenodd"></path></svg>
+</div>
+</div>
+</div>
+<div>
+<h4 class="font-bold text-[#141118] mb-4">Services</h4>
+<ul class="space-y-3">
+<li><a class="text-[#756189] hover:text-primary transition-colors text-sm" href="#">Dog Boarding</a></li>
+<li><a class="text-[#756189] hover:text-primary transition-colors text-sm" href="#">Cat Boarding</a></li>
+<li><a class="text-[#756189] hover:text-primary transition-colors text-sm" href="#">Grooming Spa</a></li>
+<li><a class="text-[#756189] hover:text-primary transition-colors text-sm" href="#">Pet Relocation</a></li>
+<li><a class="text-[#756189] hover:text-primary transition-colors text-sm" href="#">Vet Clinic</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-[#141118] mb-4">Company</h4>
+<ul class="space-y-3">
+<li><a class="text-[#756189] hover:text-primary transition-colors text-sm" href="#">About Us</a></li>
+<li><a class="text-[#756189] hover:text-primary transition-colors text-sm" href="#">Careers</a></li>
+<li><a class="text-[#756189] hover:text-primary transition-colors text-sm" href="#">Press</a></li>
+<li><a class="text-primary font-bold text-sm" href="#">Support / FAQ</a></li>
+<li><a class="text-[#756189] hover:text-primary transition-colors text-sm" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-[#141118] mb-4">Contact Us</h4>
+<ul class="space-y-3">
+<li class="flex items-start gap-3 text-sm text-[#756189]">
+<span class="material-symbols-outlined text-[18px] mt-0.5">location_on</span>
+<span>Plot 1234, Wuse II,<br/>Abuja, FCT, Nigeria</span>
+</li>
+<li class="flex items-center gap-3 text-sm text-[#756189]">
+<span class="material-symbols-outlined text-[18px]">call</span>
+<span>+234 800 WAGGIES</span>
+</li>
+<li class="flex items-center gap-3 text-sm text-[#756189]">
+<span class="material-symbols-outlined text-[18px]">mail</span>
+<span>hello@waggies.ng</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-[#f2f0f4] pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+<p class="text-[#756189] text-xs">© 2025 Waggies Pet Services. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="text-[#756189] hover:text-primary text-xs" href="#">Privacy Policy</a>
+<a class="text-[#756189] hover:text-primary text-xs" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
