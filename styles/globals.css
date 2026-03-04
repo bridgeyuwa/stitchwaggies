@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Brand seed from existing HTML palette: #6B2C91 / #9D5CC0 / #3E1A57 */
+    --background: 0.98 0.01 84;
+    --foreground: 0.33 0.08 314;
+
+    --card: 1 0 0;
+    --card-foreground: 0.33 0.08 314;
+
+    --muted: 0.95 0.02 310;
+    --muted-foreground: 0.5 0.05 312;
+
+    --accent: 0.78 0.12 318;
+    --accent-foreground: 0.22 0.05 312;
+
+    --primary: 0.43 0.16 317;
+    --primary-foreground: 0.98 0.01 84;
+
+    --secondary: 0.9 0.04 84;
+    --secondary-foreground: 0.33 0.08 314;
+
+    --border: 0.9 0.02 305;
+    --input: 0.9 0.02 305;
+    --ring: 0.43 0.16 317;
+
+    --success: 0.7 0.17 152;
+    --success-foreground: 0.99 0.01 120;
+
+    --warning: 0.82 0.16 84;
+    --warning-foreground: 0.3 0.05 84;
+
+    --info: 0.67 0.12 250;
+    --info-foreground: 0.98 0.01 250;
+
+    --destructive: 0.58 0.22 28;
+    --destructive-foreground: 0.98 0.01 28;
+
+    --radius: 0.75rem;
+    --shadow-soft: 0 10px 30px -12px oklch(0.33 0.08 314 / 0.16);
+    --shadow-glow: 0 0 40px oklch(0.43 0.16 317 / 0.32);
+  }
+
+  .dark {
+    --background: 0.2 0.03 312;
+    --foreground: 0.96 0.01 84;
+
+    --card: 0.24 0.03 313;
+    --card-foreground: 0.96 0.01 84;
+
+    --muted: 0.29 0.03 312;
+    --muted-foreground: 0.76 0.02 309;
+
+    --accent: 0.35 0.07 315;
+    --accent-foreground: 0.96 0.01 84;
+
+    --primary: 0.71 0.15 317;
+    --primary-foreground: 0.18 0.03 313;
+
+    --secondary: 0.34 0.03 300;
+    --secondary-foreground: 0.96 0.01 84;
+
+    --border: 0.34 0.03 307;
+    --input: 0.34 0.03 307;
+    --ring: 0.71 0.15 317;
+
+    --success: 0.75 0.15 152;
+    --success-foreground: 0.2 0.03 152;
+
+    --warning: 0.86 0.13 84;
+    --warning-foreground: 0.22 0.04 84;
+
+    --info: 0.75 0.1 250;
+    --info-foreground: 0.18 0.03 250;
+
+    --destructive: 0.69 0.18 28;
+    --destructive-foreground: 0.2 0.03 28;
+
+    --shadow-soft: 0 10px 30px -12px oklch(0 0 0 / 0.5);
+    --shadow-glow: 0 0 40px oklch(0.71 0.15 317 / 0.26);
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans), sans-serif;
+  }
+}
+
+@layer components {
+  .page-container {
+    width: 100%;
+    max-width: 1280px;
+    margin-inline: auto;
+    padding-inline: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .page-container {
+      padding-inline: 2.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .page-container {
+      padding-inline: 3rem;
+    }
+  }
+}
